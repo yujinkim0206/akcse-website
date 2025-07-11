@@ -134,6 +134,7 @@ table {
     border-spacing: 0;
 }
 
+/* setting up fonts */
 :root {
     font-family: "Inter", sans-serif;
 }
@@ -143,4 +144,10 @@ table {
         font-family: "InterVariable", sans-serif;
         font-optical-sizing: auto;
     }
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1.5rem 3rem;
 }
