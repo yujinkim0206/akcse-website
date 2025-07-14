@@ -107,10 +107,6 @@ section {
     display: block;
 }
 
-body {
-    line-height: 1;
-}
-
 ol,
 ul {
     list-style: none;
@@ -134,7 +130,7 @@ table {
     border-spacing: 0;
 }
 
-/* setting up fonts */
+/* fonts */
 :root {
     font-family: "Inter", sans-serif;
 }
@@ -144,6 +140,11 @@ table {
         font-family: "InterVariable", sans-serif;
         font-optical-sizing: auto;
     }
+}
+
+/* custom properties */
+:root {
+    --margin: 4rem;
 }
 
 body {
@@ -199,4 +200,5 @@ small {
 .container {
     max-width: 1280px;
     margin: 0 auto;
+    padding: 1rem 2rem
 }
