@@ -11,7 +11,7 @@ class MyHeader extends HTMLElement {
                     <li><a href="about.html">About</a></li>
                     <li><a href="events.html">Events</a></li>
                     <li><a href="members.html">Members</a></li>
-                    <li><a href="research.html">Research</a></li>
+                    <li><a href="research.html">Research & Literature</a></li>
                 </ul>
             </nav>
         </header>
