@@ -6,22 +6,31 @@ import NavLinks from "./NavLinks";
 import { useState } from "react";
 import HamburgerButton from "./HamburgerButton";
 import clsx from "clsx";
-import SocialMediaIcons from "./SocialMediaIcons";
+import AKCSEUofTHeaderSocial from "./AKCSEUofTHeaderSocial";
 import EmailCopy from "./EmailCopy";
+import SearchBar from "./SearchBar";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="flex w-full items-center justify-between px-6 py-6 lg:px-10">
+    <nav className="wrap flex w-full items-center justify-between py-4">
       <Link href="/" className="">
         <Image src="/logo-nav.png" alt="AKCSE Logo" width={50} height={45} />
       </Link>
 
-      <HamburgerButton isOpen={isOpen} setIsOpen={setIsOpen} />
-
-      <div className="hidden gap-8 lg:flex">
+      {/* desktop */}
+      <div className="hidden lg:block">
         <NavLinks variant="desktop" />
+      </div>
+
+      <div className="hidden lg:block">
+        <SearchBar />
+      </div>
+
+      {/* mobile */}
+      <div className="block lg:hidden">
+        <HamburgerButton isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
 
       <div
@@ -30,11 +39,9 @@ export default function NavBar() {
           isOpen ? "opacity-100" : "pointer-events-none opacity-0",
         )}
       >
-        <div className="flex flex-col gap-6 text-2xl">
-          <NavLinks variant="mobile" onLinkClick={() => setIsOpen(false)} />
-        </div>
+        <NavLinks variant="mobile" onLinkClick={() => setIsOpen(false)} />
         <EmailCopy />
-        <SocialMediaIcons />
+        <AKCSEUofTHeaderSocial />
       </div>
     </nav>
   );

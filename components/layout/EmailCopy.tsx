@@ -19,7 +19,10 @@ export default function EmailCopy() {
 
   return (
     <div className="relative inline-block">
-      <button onClick={copyToClipboard} className="hover:text-gray-500 transition-colors duration-300">
+      <button
+        onClick={copyToClipboard}
+        className="cursor-pointer transition-opacity duration-300 hover:opacity-75"
+      >
         {email}
       </button>
       <span

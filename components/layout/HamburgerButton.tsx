@@ -9,7 +9,7 @@ export default function HamburgerButton({
 }) {
   return (
     <button
-      className="relative z-20 h-8 w-8 focus:outline-none lg:hidden"
+      className="relative z-20 h-8 w-8 cursor-pointer"
       onClick={() => setIsOpen(!isOpen)}
     >
       <span
