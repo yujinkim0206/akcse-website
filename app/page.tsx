@@ -1,9 +1,11 @@
-import Hero from './Hero';
+import Hero from '@/components/sections/Hero';
+import FeaturedResearch from '@/components/sections/FeaturedResearch';
 
 export default function Home() {
   return (
-    <main className="flex justify-center">
+    <main>
       <Hero />
+      <FeaturedResearch />
     </main>
   );
 }
