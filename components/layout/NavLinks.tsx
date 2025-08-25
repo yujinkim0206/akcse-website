@@ -24,7 +24,7 @@ export default function NavLinks({
   const variants = {
     desktop: {
       container: "flex gap-8",
-      linkClassName: "font-semibold tracking-wide",
+      linkClassName: "text-sm font-semibold tracking-wide",
       activeClassName: "-skew-x-12",
       inactiveClassName: "skew-x-0",
     },
@@ -39,7 +39,7 @@ export default function NavLinks({
   const v = variants[variant];
 
   return (
-    <div className={v.container}>
+    <nav className={v.container}>
       {links.map((link) => (
         <Link
           key={link.name}
@@ -53,6 +53,6 @@ export default function NavLinks({
           {link.name}
         </Link>
       ))}
-    </div>
+    </nav>
   );
 }
