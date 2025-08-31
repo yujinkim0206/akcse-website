@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="flex min-h-[100dvh] items-center bg-black text-white">
       <div className="wrap">
         <div className="md:w-1/2 space-y-8">
-          <h2 className="text-3xl md:text-4xl font-medium">
+          <h2 className="text-2xl md:text-4xl font-medium">
             Association of Korean-Canadian <br />
             Scientists and Engineers at the <br />
             University of Toronto

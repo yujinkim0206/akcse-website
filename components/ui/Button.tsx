@@ -14,7 +14,7 @@ export default function Button({
     <Link
       href={href}
       className={clsx(
-        "rounded px-3 py-2 font-semibold",
+        "rounded px-4 py-3 font-semibold",
         theme === "light" ? "bg-black text-white" : "bg-white text-black",
       )}
     >
