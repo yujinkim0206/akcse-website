@@ -26,7 +26,7 @@ export default async function FeaturedResearch() {
 
   if (error) {
     return (
-      <section className="wrap my-[var(--vertical-spacing)]">
+      <section className="wrap mb-[var(--vertical-spacing)]">
         <p className="text-red-500">Failed to load data: {error.message}</p>
       </section>
     );
@@ -41,7 +41,7 @@ export default async function FeaturedResearch() {
     );
 
   return (
-    <section className="wrap my-[var(--vertical-spacing)] flex flex-col-reverse items-center justify-between gap-10 md:flex-row md:gap-0">
+    <section className="wrap mb-[var(--vertical-spacing)] flex flex-col-reverse items-center justify-between gap-10 md:flex-row md:gap-0">
       <div className="md:w-[48%]">
         <h2 className="text-sm mb-2">Featured this month</h2>
         <h3 className="section-heading">{data.title}</h3>

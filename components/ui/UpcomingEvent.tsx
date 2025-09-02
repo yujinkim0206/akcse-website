@@ -1,14 +1,12 @@
 type UpcomingEventProps = {
-  id: string;
-  month: string;
-  day: string;
+  month?: string;
+  day?: string;
   time?: string | null;
-  summary: string;
+  summary?: string;
   location?: string | null;
 };
 
 export default function UpcomingEvent({
-  id,
   month,
   day,
   time,
@@ -17,17 +15,16 @@ export default function UpcomingEvent({
 }: UpcomingEventProps) {
   return (
     <li
-      key={id}
-      className="flex h-26 items-center gap-8 rounded-lg border-1 border-gray-200 px-6"
+      className="flex h-24 items-center gap-8 rounded-lg border-1 border-gray-200 px-6"
     >
       <div className="text-center">
-        <div className="text-xs text-gray-500 uppercase">{month}</div>
-        <div className="text-2xl leading-none font-semibold">{day}</div>
+        {month ? <div className="text-xs text-gray-500 uppercase">{month}</div> : null}
+        {day? <div className="text-2xl leading-none font-semibold">{day}</div> : null}
       </div>
 
       <div className="min-w-0 space-y-0.5">
         {time ? <div className="text-sm text-gray-500">{time}</div> : null}
-        <div className="truncate font-medium">{summary}</div>
+        <div className="truncate font-medium">{summary ? summary : "No upcoming events."}</div>
         {location ? (
           <div className="flex items-center truncate text-sm text-gray-500">
             <svg

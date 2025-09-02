@@ -14,8 +14,9 @@ export default async function Home() {
   const res = await fetch(url);
   if (!res.ok) {
     return (
-      <section className="wrap my-[var(--vertical-spacing)]">
-        Failed to load events.
+      <section className="wrap mb-[var(--vertical-spacing)]">
+        <h2 className="section-heading">Upcoming Events</h2>
+        <p>Failed to load events.</p>
       </section>
     );
   }
@@ -25,8 +26,13 @@ export default async function Home() {
 
   if (events.length === 0) {
     return (
-      <section className="wrap my-[var(--vertical-spacing)]">
-        No upcoming events.
+      <section className="wrap mb-[var(--vertical-spacing)]">
+        <h2 className="section-heading">Upcoming Events</h2>
+        <ul className="space-y-4">
+          return (
+          <UpcomingEvent />
+          );
+        </ul>
       </section>
     );
   }
@@ -67,16 +73,15 @@ export default async function Home() {
   };
 
   return (
-    <section className="wrap my-[var(--vertical-spacing)]">
+    <section className="wrap mb-[var(--vertical-spacing)]">
       <h2 className="section-heading">Upcoming Events</h2>
       <ul className="space-y-4">
-        {events.map((event : any) => {
+        {events.map((event: any) => {
           const { month, day } = getMonthDay(event.start);
           const time = getTime(event.start);
           return (
             <UpcomingEvent
               key={event.id}
-              id={event.id}
               month={month}
               day={day}
               time={time}
