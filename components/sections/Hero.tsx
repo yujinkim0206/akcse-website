@@ -1,16 +1,15 @@
-import Button from "@/components/ui/Button";
+// import Button from "@/components/ui/Button";
 
 export default function Hero() {
   return (
-    <section className="flex min-h-[100dvh] items-center bg-black text-white">
-      <div className="wrap">
-        <div className="md:w-1/2 space-y-8">
-          <h2 className="text-2xl md:text-4xl font-medium">
-            Association of Korean-Canadian <br />
-            Scientists and Engineers at the <br />
-            University of Toronto
-          </h2>
-          <p>
+    <section className="flex h-[calc(100vh*2/3)] items-end p-8">
+        <h2 className="text-lg font-light tracking-tighter md:text-2xl">
+          Association of Korean-Canadian <br />
+          Scientists and Engineers at the <br />
+          University of Toronto
+        </h2>
+        {/* <div className="space-y-8"> */}
+        {/* <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum
             labore saepe autem, modi earum molestias rerum consequatur nostrum
             blanditiis. Perferendis dicta fuga maiores corporis incidunt. Cumque
@@ -18,9 +17,8 @@ export default function Hero() {
           </p>
           <Button href="/about" theme="dark">
             Learn More
-          </Button>
-        </div>
-      </div>
+          </Button> */}
+        {/* </div> */}
     </section>
   );
 }

@@ -5,8 +5,12 @@
   :root {
     --background: #ffffff;
     --foreground: #171717;
-    --header: 64px;
+    --header: 56px;
     --vertical-spacing: 8rem;
+    --grow: 30px;
+    --card-width: 600px;
+    --card-width-hover: calc(var(--card-width) + var(--grow));
+    --card-height-hover: calc((var(--card-width) + var(--grow)) * 4 / 3);
   }
 
   html {
@@ -31,6 +35,24 @@
   }
 
   .section-heading {
-    @apply mb-4 md:mb-8 text-3xl font-semibold md:text-4xl;
+    @apply mb-4 text-2xl font-semibold tracking-tight md:mb-6 md:text-3xl;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes inner-marquee {
+  from {
+    transform: translateX(-25%);
+  }
+  to {
+    transform: translateX(25%);
   }
 }
