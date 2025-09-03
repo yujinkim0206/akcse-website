@@ -5,12 +5,15 @@
   :root {
     --background: #ffffff;
     --foreground: #171717;
-    --header: 64px;
+    --subtitle: #525252;
+    --hover-black: #737373;
+    --hover-white: #d4d4d4;
+    --header: 72px;
     --vertical-spacing: 8rem;
     --grow: 30px;
-    --card-width: 600px;
-    --card-width-hover: calc(var(--card-width) + var(--grow));
-    --card-height-hover: calc((var(--card-width) + var(--grow)) * 4 / 3);
+    --card-height: calc(100vh - var(--grow));
+    --card-height-hover: 100vh;
+    --card-width: calc(var(--card-height)*3/4);
   }
 
   html {
@@ -27,7 +30,7 @@
 
 @layer components {
   .wrap {
-    @apply mx-auto max-w-7xl px-6 md:px-10;
+    @apply mx-auto max-w-7xl px-6;
   }
 
   .footer * {
@@ -35,7 +38,11 @@
   }
 
   .section-heading {
-    @apply mb-4 text-2xl font-semibold tracking-tight md:mb-6 md:text-3xl;
+    @apply mb-2 text-2xl font-light tracking-tighter md:mb-4 md:text-3xl;
+  }
+
+  .section-spacing {
+    @apply mb-20 md:mb-30;
   }
 }
 

@@ -12,7 +12,7 @@ export default function ScrollingCards() {
   const CARD_LENGTH = DURATION / items.length;
 
   return (
-    <section className="overflow-hidden mb-[var(--vertical-spacing)]">
+    <section className="overflow-hidden section-spacing">
       <div
         className="flex w-max h-[var(--card-height-hover)] animate-[marquee_linear_infinite] items-center justify-center will-change-transform"
         style={{ animationDuration: `${DURATION}s` }}
@@ -20,7 +20,7 @@ export default function ScrollingCards() {
         {doubled.map((item, i) => (
           <div
             key={i}
-            className="relative aspect-[3/4] w-[var(--card-width)] shrink-0 overflow-hidden bg-black transition-all duration-300 hover:w-[var(--card-width-hover)]"
+            className="relative aspect-[3/4] h-[var(--card-height)] shrink-0 overflow-hidden bg-black transition-all duration-300 hover:h-[var(--card-height-hover)]"
           >
             <div className="absolute top-1/2 left-1/2 h-[var(--card-height-hover)] w-[calc(var(--card-width)*4)] -translate-x-1/2 -translate-y-1/2">
               <img

@@ -24,13 +24,13 @@ export default function NavLinks({
   const variants = {
     desktop: {
       container: "flex gap-8",
-      linkClassName: "text-sm font-medium tracking-tighter transition-colors duration-300 hover:text-gray-400",
+      linkClassName: "text-sm tracking-tighter transition-colors duration-200 hover:text-[var(--hover-black)]",
       activeClassName: "-skew-x-12",
       inactiveClassName: "skew-x-0",
     },
     mobile: {
-      container: "flex flex-col gap-6",
-      linkClassName: "text-2xl font-semibold uppercase tracking-wide transition-colors duration-300 hover:text-gray-400",
+      container: "flex flex-col gap-3",
+      linkClassName: "text-2xl tracking-tight transition-colors duration-200 hover:text-[var(--hover-black)]",
       activeClassName: "-skew-x-12",
       inactiveClassName: "skew-x-0",
     },

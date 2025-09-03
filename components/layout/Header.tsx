@@ -15,7 +15,7 @@ export default function NavBar() {
 
   return (
     <header className="absolute inset-x-0 top-0 z-10 h-[var(--header)] bg-white">
-      <div className="px-6 flex h-full items-center justify-between">
+      <div className="px-8 flex h-full items-center justify-between">
         <Link href="/" className="">
           <Image src="/logo-nav.png" alt="AKCSE Logo" width={40} height={36} />
         </Link>

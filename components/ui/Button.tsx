@@ -4,18 +4,21 @@ import clsx from "clsx";
 export default function Button({
   href,
   children,
-  theme = "light",
+  theme = "transparent",
 }: {
   href: string;
   children: React.ReactNode;
-  theme?: "light" | "dark";
+  theme?: "black" | "white" | "transparent";
 }) {
   return (
     <Link
       href={href}
       className={clsx(
-        "rounded px-4 py-3 font-semibold",
-        theme === "light" ? "bg-black text-white" : "bg-white text-black",
+        "font-medium",
+        theme === "black" && "rounded bg-black px-4 py-3 text-white transition-colors duration-300 hover:text-[var(--hover-white)]",
+        theme === "white" && "rounded bg-white px-4 py-3 text-black transition-colors duration-300 hover:text-[var(--hover-black)]",
+        theme === "transparent" &&
+          "transition-colors duration-300 hover:text-[var(--hover-black)]",
       )}
     >
       {children}{" "}

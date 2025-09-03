@@ -1,6 +1,6 @@
 import UpcomingEvent from "../ui/UpcomingEvent";
 
-export default async function Home() {
+export default async function UpcomingEvents() {
   const apiKey = process.env.GOOGLE_API_KEY!;
   const calendarId = process.env.GOOGLE_CALENDAR_ID!;
   const timeMin = new Date().toISOString();
@@ -14,7 +14,7 @@ export default async function Home() {
   const res = await fetch(url);
   if (!res.ok) {
     return (
-      <section className="wrap mb-[var(--vertical-spacing)]">
+      <section className="wrap section-spacing">
         <h2 className="section-heading">Upcoming Events</h2>
         <p>Failed to load events.</p>
       </section>
@@ -26,7 +26,7 @@ export default async function Home() {
 
   if (events.length === 0) {
     return (
-      <section className="wrap mb-[var(--vertical-spacing)]">
+      <section className="wrap section-spacing">
         <h2 className="section-heading">Upcoming Events</h2>
         <ul className="space-y-4">
           return (
@@ -73,9 +73,9 @@ export default async function Home() {
   };
 
   return (
-    <section className="wrap mb-[var(--vertical-spacing)]">
+    <section className="wrap section-spacing">
       <h2 className="section-heading">Upcoming Events</h2>
-      <ul className="space-y-4">
+      <ul className="">
         {events.map((event: any) => {
           const { month, day } = getMonthDay(event.start);
           const time = getTime(event.start);
