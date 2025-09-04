@@ -8,16 +8,16 @@ import HamburgerButton from "./HamburgerButton";
 import clsx from "clsx";
 import AKCSEUofTHeaderSocial from "./AKCSEUofTHeaderSocial";
 import EmailCopy from "./EmailCopy";
-import SearchBar from "./SearchBar";
+// import SearchBar from "./SearchBar";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header className="absolute inset-x-0 top-0 z-10 h-[var(--header)] bg-white">
-      <div className="wrap flex h-full items-center justify-between">
+      <div className="px-8 flex h-full items-center justify-between">
         <Link href="/" className="">
-          <Image src="/logo-nav.png" alt="AKCSE Logo" width={50} height={45} />
+          <Image src="/logo-nav.png" alt="AKCSE Logo" width={40} height={36} />
         </Link>
 
         {/* desktop */}
@@ -25,9 +25,9 @@ export default function NavBar() {
           <NavLinks variant="desktop" />
         </div>
 
-        <div className="hidden lg:block">
+        {/* <div className="hidden lg:block">
           <SearchBar />
-        </div>
+        </div> */}
 
         {/* mobile */}
         <div className="block lg:hidden">

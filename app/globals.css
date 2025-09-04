@@ -5,8 +5,15 @@
   :root {
     --background: #ffffff;
     --foreground: #171717;
-    --header: 64px;
-    --vertical-spacing: 6rem;
+    --subtitle: #525252;
+    --hover-black: #737373;
+    --hover-white: #d4d4d4;
+    --header: 72px;
+    --vertical-spacing: 8rem;
+    --grow: 30px;
+    --card-height: calc(100vh - var(--grow));
+    --card-height-hover: 100vh;
+    --card-width: calc(var(--card-height)*3/4);
   }
 
   html {
@@ -28,5 +35,31 @@
 
   .footer * {
     @apply text-sm font-light;
+  }
+
+  .section-heading {
+    @apply mb-2 text-2xl font-light tracking-tighter md:mb-4 md:text-3xl;
+  }
+
+  .section-spacing {
+    @apply mb-20 md:mb-30;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes inner-marquee {
+  from {
+    transform: translateX(-25%);
+  }
+  to {
+    transform: translateX(25%);
   }
 }
