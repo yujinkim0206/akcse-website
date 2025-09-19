@@ -11,16 +11,13 @@ type Events = {
 export default function EventCard({ events }: { events: Events }) {
   return (
     <div className="flex gap-[5vw]">
-      <img
-        src={events.img_src}
-        className="w-4/10 aspect-video rounded-md object-cover"
-      />
-      <div className="w-6/10 flex flex-col justify-center">
-        <h4 className="font-bold">{events.title}</h4>
-        <p className="mt-[8px] text text-gray-500 line-clamp-2">
+      <img src={events.img_src} className="aspect-video w-4/10 object-cover" />
+      <div className="flex w-6/10 flex-col justify-center">
+        <h4 className="text-3xl font-bold">{events.title}</h4>
+        <p className="mt-[8px] line-clamp-2 text-xl text-[var(--subtitle)]">
           {events.description}
         </p>
-        <p className="mt-[8px] text text-gray-500">{events.date}</p>
+        <p className="mt-[8px] text-sm text-[var(--subtitle)]">{events.date}</p>
       </div>
     </div>
   );

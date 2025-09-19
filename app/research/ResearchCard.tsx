@@ -16,11 +16,13 @@ export default function ResearchCard({ research }: { research: Research }) {
       <div className="group relative cursor-pointer">
         <img
           src={research.preview_img_src}
-          className="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75"
+          className="aspect-square w-full bg-gray-200 object-cover group-hover:opacity-75"
         />
         <div className="mt-[8px]">
-          <h6 className="font-bold">{research.title}</h6>
-          <p className=" text-gray-500 line-clamp-2">{research.subtitle}</p>
+          <h6 className="text-xl font-bold">{research.title}</h6>
+          <p className="line-clamp-2 text-sm text-[var(--subtitle)]">
+            {research.subtitle}
+          </p>
         </div>
       </div>
     </Link>
