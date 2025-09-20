@@ -1,4 +1,6 @@
 import UpcomingEvent from "../ui/UpcomingEvent";
+import Image from "next/image";
+import UpcomingEventsImage from "../ui/UpcomingEventsImage";
 
 export default async function UpcomingEvents() {
   const apiKey = process.env.GOOGLE_API_KEY!;
@@ -15,8 +17,13 @@ export default async function UpcomingEvents() {
   if (!res.ok) {
     return (
       <section className="wrap section-spacing">
-        <h2 className="section-heading">Upcoming Events</h2>
-        <p>Failed to load events.</p>
+        <div className="upcoming-events">
+          <UpcomingEventsImage />
+          <div className="upcoming-events-cards">
+            <h2 className="section-heading">Upcoming Events</h2>
+            <div className="listing-card">Failed to load events</div>
+          </div>
+        </div>
       </section>
     );
   }
@@ -27,12 +34,13 @@ export default async function UpcomingEvents() {
   if (events.length === 0) {
     return (
       <section className="wrap section-spacing">
-        <h2 className="section-heading">Upcoming Events</h2>
-        <ul className="space-y-4">
-          return (
-          <UpcomingEvent />
-          );
-        </ul>
+        <div className="upcoming-events">
+          <UpcomingEventsImage />
+          <div className="upcoming-events-cards">
+            <h2 className="section-heading">Upcoming Events</h2>
+            <div className="listing-card">No upcoming events.</div>
+          </div>
+        </div>
       </section>
     );
   }
@@ -74,25 +82,30 @@ export default async function UpcomingEvents() {
 
   return (
     <section className="wrap section-spacing">
-      <h2 className="section-heading">Upcoming Events</h2>
-      <ul className="">
-        {events.map((event: any) => {
-          const { month, day } = getMonthDay(event.start);
-          const time = getTime(event.start);
-          return (
-            <UpcomingEvent
-              key={event.id}
-              month={month}
-              day={day}
-              time={time}
-              summary={event.summary}
-              location={
-                event.location ? getShortLocation(event.location) : null
-              }
-            />
-          );
-        })}
-      </ul>
+      <div className="upcoming-events">
+        <UpcomingEventsImage />
+        <div className="upcoming-events-cards">
+          <h2 className="section-heading">Upcoming Events</h2>
+          <ul className="">
+            {events.map((event: any) => {
+              const { month, day } = getMonthDay(event.start);
+              const time = getTime(event.start);
+              return (
+                <UpcomingEvent
+                  key={event.id}
+                  month={month}
+                  day={day}
+                  time={time}
+                  summary={event.summary}
+                  location={
+                    event.location ? getShortLocation(event.location) : null
+                  }
+                />
+              );
+            })}
+          </ul>
+        </div>
+      </div>
     </section>
   );
 }
