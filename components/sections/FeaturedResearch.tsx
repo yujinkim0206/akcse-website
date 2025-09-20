@@ -19,10 +19,8 @@ export default async function FeaturedResearch() {
     .select()
     .eq("published", true)
     .order("published_date", { ascending: false })
-    // .limit(1)
-    // .single();
-    .range(1, 1)
-    .maybeSingle();
+    .limit(1)
+    .single();
 
   if (error) {
     return (
@@ -56,7 +54,7 @@ export default async function FeaturedResearch() {
           alt="Research"
           className="object-cover"
           fill
-          sizes="(min-width:768px) 45vw, 100vw"
+          sizes="(min-width:768px) 45%, 100vw"
           unoptimized 
           // delete above after getting proper image URL
         />
