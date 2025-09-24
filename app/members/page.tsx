@@ -59,7 +59,7 @@ export default function MembersPage() {
     {
       title: "Research & Literature",
       members: [
-        { name: "Yoon Kang", role: "Director", grade: "4th year", major: "Major in Physiology and Health & Disease", image: "/images/mon.png"  },
+        { name: "Yoon Kang", role: "Director", grade: "4th year", major: "Major in Physiology and Health & Disease", image: "/images/리서치_강윤종.jpg"  },
         { name: "Ellie Jung", role: "Director", grade: "Gap term", major: "Major in Industrial Engineering", image: "/images/리서치_정여진.jpeg" },
         { name: "Christine Seo", role: "(Life Science) Executive Member", grade: "3rd year", major: "Major in Neuroscience & Nutritional Science, Minor in Immunology ", image: "/images/mon.png" },
         { name: "Lucas Yoon", role: "(Tech) Executive Member", grade: "2nd year", major: "Major in Mathematics and Statistics", image: "/images/리서치_윤준서.jpg"  },
