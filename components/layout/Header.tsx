@@ -16,8 +16,8 @@ export default function NavBar() {
   return (
     <header className="absolute inset-x-0 top-0 z-50 h-[var(--header)] bg-white">
       <div className="px-8 flex h-full items-center justify-between">
-        <Link href="/" className="">
-          <Image src="/logo-nav.png" alt="AKCSE Logo" width={40} height={36} />
+        <Link href="/" className="relative w-40 h-auto">
+          <Image src="/images/logo.png" alt="AKCSE Logo" width={45} height={36} />
         </Link>
 
         {/* desktop */}
