@@ -37,7 +37,7 @@ export default async function ProjectDetail({ params }: Props) {
   if (error || !data) {
     return (
       <main className="bg-background">
-        <div className="w-full min-h-screen flex items-center justify-center">
+        <div className="flex min-h-screen w-full items-center justify-center">
           <p className="text-red-500">Error loading project data.</p>
         </div>
       </main>
@@ -45,19 +45,19 @@ export default async function ProjectDetail({ params }: Props) {
   }
   return (
     <main className="bg-background">
-      <div className="flex flex-row lg:pt-[5vh] lg:pb-[5vh] lg:pr-[20vw] lg:pl-[20vw]">
-        <div className="pt-0 pb-[5%] w-full min-h-screen bg-white">
+      <div className=".wrap { @apply px-6; } mx-auto mt-[var(--header)] flex max-w-4xl flex-row lg:pt-[5vh]">
+        <div className="min-h-screen w-full bg-white pt-0 pb-[5%]">
           <img
             src={data.preview_img_src}
-            className="w-full bg-white object-cover lg:aspect-auto lg:h-120 lg:rounded-lg"
+            className="w-full bg-white object-cover lg:aspect-auto lg:h-120"
           />
-          <h1 className="mt-[16px] max-w-[75%] mx-auto font-bold text-center tracking-tight">
+          <h1 className="mx-auto mt-[32px] max-w-[75%] text-center text-5xl font-bold tracking-tight">
             {data.title}
           </h1>
-          <p className="mt-[16px] max-w-[75%] mx-auto text-center text-gray-500">
+          <p className="mx-auto mt-[16px] max-w-[75%] text-center text-sm text-[var(--subtitle)]">
             {data.published_date}
           </p>
-          <div className="mt-[16px] max-w-[75%] mx-auto">
+          <div className="mx-auto mt-[16px] max-w-[75%]">
             {data.article_data?.map(
               (
                 article: {
@@ -70,7 +70,7 @@ export default async function ProjectDetail({ params }: Props) {
                   link: string;
                   link_title: string;
                 },
-                index: number
+                index: number,
               ) => {
                 switch (article.type) {
                   case "header":
@@ -98,7 +98,7 @@ export default async function ProjectDetail({ params }: Props) {
                   default:
                     return null;
                 }
-              }
+              },
             )}
           </div>
         </div>

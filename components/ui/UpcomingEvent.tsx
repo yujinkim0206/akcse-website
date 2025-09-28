@@ -15,7 +15,7 @@ export default function UpcomingEvent({
 }: UpcomingEventProps) {
   return (
     <li
-      className="flex h-22 items-center gap-8 border-b-1 border-gray-200 p-3"
+      className="listing-card"
     >
       <div className="text-center">
         {month ? <div className="text-xs text-[var(--subtitle)]">{month}</div> : null}
@@ -24,7 +24,7 @@ export default function UpcomingEvent({
 
       <div className="min-w-0 space-y-0.5">
         {time ? <div className="text-sm text-[var(--subtitle)]">{time}</div> : null}
-        <div className="truncate">{summary ? summary : "No upcoming events."}</div>
+        <div className="truncate">{summary}</div>
         {location ? (
           <div className="flex items-center truncate text-sm text-[var(--subtitle)]">
             <svg
