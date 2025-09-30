@@ -13,13 +13,15 @@ type Research = {
 export default function ResearchCard({ research }: { research: Research }) {
   return (
     <Link href={`/research/${research.id}`}>
-      <div className="group relative cursor-pointer">
+      <div className="relative aspect-square w-[1/3] overflow-hidden">
         <img
           src={research.preview_img_src}
-          className="aspect-square w-full bg-gray-200 object-cover group-hover:opacity-75"
+          className="h-full w-full bg-gray-200 object-cover transition duration-300 ease-in-out hover:scale-105"
         />
+      </div>
+      <div className="group relative cursor-pointer">
         <div className="mt-[8px]">
-          <h6 className="text-xl font-bold">{research.title}</h6>
+          <h6 className="text-xl font-medium">{research.title}</h6>
           <p className="line-clamp-2 text-sm text-[var(--subtitle)]">
             {research.subtitle}
           </p>
