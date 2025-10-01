@@ -1,50 +1,75 @@
 export default function AboutPage() {
   return (
-    <main className="bg-white px-6 py-12 text-gray-800 md:px-20">
-      <section className="flex flex-col items-center justify-between gap-10 md:flex-row">
-        <div className="md:w-1/2">
-          <h1 className="mb-4 text-4xl font-bold">About Us</h1>
-          <p className="text-lg leading-relaxed">
-            Association of Korean-Canadian Scientists and Engineers (AKCSE) is a
-            non-profit professional organization to support the sharing of
-            scientific knowledge between Korean-Canadians and setting up
-            connections between Korea and Canada for further development.
-          </p>
-        </div>
-
-        <div className="md:w-1/2">
-          <img
-            src="/images/about-university.jpg"
-            className="rounded-lg shadow-md"
-          />
+    <main className="bg-white text-gray-800">
+      {/* Hero Section */}
+      <section className="section-spacing relative h-[100vh] w-full overflow-hidden">
+        <img
+          src="/images/jason-uoft.jpg"
+          alt=""
+          className="h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 to-transparent">
+          <div className="mx-auto flex h-full max-w-[90rem] items-center justify-start px-6">
+            <div className="w-full text-white md:w-[40%]">
+              <h1 className="mb-6 text-5xl font-light">About Us</h1>
+              <p className="leading-7">
+                Founded in 1986, Association of Korean-Canadian Scientists and
+                Engineers (AKCSE) is a non-profit professional organization that
+                promotes the exchange of scientific knowledge and fosters
+                cooperation between Korean and Canadian communities. As the
+                University of Toronto chapter, AKCSE UofT supports
+                Korean-Canadian students in STEM through academic, professional,
+                and cultural initiatives.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="mt-20 grid items-center gap-10 md:grid-cols-3">
-        <div className="flex gap-6 md:col-span-2">
+      <section className="section-spacing mx-auto flex w-[100vw] flex-col items-center justify-center px-6">
+        {/* 오른쪽: 비전 설명 */}
+        <div className="flex max-w-2xl flex-col gap-8 text-center">
+          <h2 className="mb-4 text-5xl leading-8 font-light">Our Vision</h2>
+          <p className="text-base leading-7">
+            At AKCSE UofT, we envision a community
+            <br /> where Korean-Canadian students in STEM feel seen, supported,
+            and inspired.
+          </p>
+          <p className="text-base leading-7">
+            We strive to create a space
+            <br /> where academic ambition and cultural identity grow side by
+            side. <br />
+            Through mentorship, skill-building, and peer support, <br />
+            we help students navigate their unique journeys. We believe that
+            true growth happens not only in classrooms, but also in
+            collaboration, curiosity, and courage.
+          </p>
+          <p className="text-base leading-7">
+            We are committed to building bridges
+            <br />
+            —between disciplines, cultures, and generations. <br />
+            By empowering individuals, <br />
+            we strengthen our collective voice and presence in STEM.
+          </p>
+          <p className="text-base leading-7">
+            Together, we’re shaping a future where knowledge and connection lead
+            the way.
+          </p>
+        </div>
+        <div className="mx-auto mt-20 flex max-w-7xl flex-col gap-10 md:flex-row md:justify-center">
           <img
             src="/images/about-akcse.jpg"
-            alt="AKCSE UOFT"
-            className="w-1/2 rounded-xl shadow-md"
+            alt="AKCSE UofT"
+            className="w-full object-cover shadow-md md:w-1/3"
           />
           <img
             src="/images/about-coffeechat.jpg"
-            alt="Coffee Chat with AKCSE"
-            className="w-1/2 rounded-xl shadow-md"
+            alt="Coffee Chat"
+            className="w-full object-cover shadow-md md:w-1/3"
           />
-        </div>
-
-        <div>
-          <h2 className="mb-4 text-2xl font-semibold">Our Vision</h2>
-          <p className="text-base leading-relaxed">
-            Founded in 1986, AKCSE promotes the application of science and
-            technology for the general welfare of society. Further, we encourage
-            international cooperation between Korea and Canada and support
-            Korean-Canadians to develop their career potential in STEM through
-            academic, professional, and community initiatives.
-          </p>
         </div>
       </section>
     </main>
   );
 }
+
