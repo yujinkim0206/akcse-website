@@ -20,13 +20,13 @@ export default async function EventsList() {
     .order("date", { ascending: false });
 
   return (
-    <main className="bg-background .wrap { @apply px-6; } mx-auto min-h-screen max-w-7xl">
+    <main className="bg-background wrap mx-auto min-h-screen max-w-7xl">
       {error && (
         <p className="text-red-500">Failed to load data: {error.message}</p>
       )}
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl">
-        <h1 className="text-5xl font-bold tracking-tight">Events</h1>
-        <h4 className="text-xl text-[var(--subtitle)]">
+        <h1 className="mb-2 text-5xl font-light tracking-tight">Events</h1>
+        <h4 className="text-lg text-[var(--subtitle)]">
           Subtitle subtitle subtitle
         </h4>
 
