@@ -8,8 +8,16 @@ export const metadata: Metadata = {
     template: "%s | AKCSE UofT",
     default: "AKCSE UofT",
   },
-  description: "The Association of Korean-Canadian Scientists and Engineers at the University of Toronto",
-  // metadataBase: new URL(),
+  description:
+    "The Association of Korean-Canadian Scientists and Engineers at the University of Toronto supports Korean-Canadian students in STEM through academic, professional, and cultural initiatives.",
+  // metadataBase: new URL(url), // fix url
+  openGraph: {
+    title: "The Association of Korean-Canadian Scientists and Engineers at the University of Toronto",
+    description:
+      "Connecting Korean-Canadian students in STEM through academic, professional, and cultural initiatives.",
+    url: "", // fix url
+    siteName: "AKCSE UofT",
+  },
 };
 
 export default function RootLayout({

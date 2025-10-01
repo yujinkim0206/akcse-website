@@ -14,7 +14,7 @@ export default function Footer() {
         </div>
 
         <div className="space-y-2">
-          <p className="font-semibold">Contact</p>
+          <p className="font-medium">Contact</p>
           <p>akcse.utoronto@gmail.com</p>
           <p>100 St. George Street</p>
           <p>Toronto, Ontario M5S 3G3</p>
@@ -22,11 +22,11 @@ export default function Footer() {
 
         <div className="space-y-2">
           <div className="space-y-1">
-            <p className="font-semibold">Follow AKCSE UofT</p>
+            <p className="font-medium">Follow AKCSE UofT</p>
             <AKCSEUofTFooterSocial />
           </div>
           <div className="space-y-1">
-            <p className="font-semibold">Follow AKCSE</p>
+            <p className="font-medium">Follow AKCSE</p>
             <AKCSEFooterSocial />
           </div>
         </div>

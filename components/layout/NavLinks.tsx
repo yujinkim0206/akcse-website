@@ -24,7 +24,7 @@ export default function NavLinks({
   const variants = {
     desktop: {
       container: "flex gap-8",
-      linkClassName: "text-sm tracking-tighter transition-colors duration-200 hover:text-[var(--hover-black)]",
+      linkClassName: "text-md tracking-tighter transition-colors duration-200 hover:text-[var(--hover-black)]",
       activeClassName: "-skew-x-12",
       inactiveClassName: "skew-x-0",
     },

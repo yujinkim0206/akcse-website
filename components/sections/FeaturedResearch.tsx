@@ -36,7 +36,8 @@ export default async function FeaturedResearch() {
     )
     ?.map(
       (article : Article) => article.text,
-    );
+    )
+    ?.join(" ");
 
   return (
     <section className="wrap section-spacing flex flex-col items-center justify-between gap-12 md:flex-row md:gap-0">
