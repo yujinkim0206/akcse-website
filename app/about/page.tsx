@@ -11,7 +11,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 to-transparent">
           <div className="mx-auto flex h-full max-w-[90rem] items-center justify-start px-6">
             <div className="w-full text-white md:w-[40%]">
-              <h1 className="mb-6 text-5xl font-light">About Us</h1>
+              <h1 className="mb-4 md:mb-6 text-4xl md:text-5xl font-light">About Us</h1>
               <p className="leading-7">
                 Founded in 1986, Association of Korean-Canadian Scientists and
                 Engineers (AKCSE) is a non-profit professional organization that
@@ -28,44 +28,38 @@ export default function AboutPage() {
 
       <section className="section-spacing mx-auto flex w-[100vw] flex-col items-center justify-center px-6">
         {/* 오른쪽: 비전 설명 */}
-        <div className="flex max-w-2xl flex-col gap-8 text-center">
-          <h2 className="mb-4 text-5xl leading-8 font-light">Our Vision</h2>
-          <p className="text-base leading-7">
-            At AKCSE UofT, we envision a community
-            <br /> where Korean-Canadian students in STEM feel seen, supported,
+        <div className="flex max-w-xl flex-col text-center">
+          <h2 className="mb-4 md:mb-6 text-4xl md:text-5xl font-light">Our Vision</h2>
+          <p className="mb-4 leading-7">
+            At AKCSE UofT, we envision a community where Korean-Canadian students in STEM feel seen, supported,
             and inspired.
           </p>
-          <p className="text-base leading-7">
-            We strive to create a space
-            <br /> where academic ambition and cultural identity grow side by
-            side. <br />
-            Through mentorship, skill-building, and peer support, <br />
-            we help students navigate their unique journeys. We believe that
+          <p className="mb-4 leading-7">
+            We strive to create a space where academic ambition and cultural identity grow side by
+            side. Through mentorship, skill-building, and peer support, we help students navigate their unique journeys. We believe that
             true growth happens not only in classrooms, but also in
             collaboration, curiosity, and courage.
           </p>
-          <p className="text-base leading-7">
+          <p className="mb-4 leading-7">
             We are committed to building bridges
             <br />
-            —between disciplines, cultures, and generations. <br />
-            By empowering individuals, <br />
-            we strengthen our collective voice and presence in STEM.
+            —between disciplines, cultures, and generations. By empowering individuals, we strengthen our collective voice and presence in STEM.
           </p>
-          <p className="text-base leading-7">
+          <p className="mb-4 leading-7">
             Together, we’re shaping a future where knowledge and connection lead
             the way.
           </p>
         </div>
-        <div className="mx-auto mt-20 flex max-w-7xl flex-col gap-10 md:flex-row md:justify-center">
+        <div className="mx-auto mt-20 flex max-w-7xl flex-col gap-10 md:flex-row items-center md:justify-center">
           <img
             src="/images/about-akcse.jpg"
             alt="AKCSE UofT"
-            className="w-full object-cover shadow-md md:w-1/3"
+            className="w-[90%] object-cover shadow-md md:w-1/3"
           />
           <img
             src="/images/about-coffeechat.jpg"
             alt="Coffee Chat"
-            className="w-full object-cover shadow-md md:w-1/3"
+            className="w-[90%] object-cover shadow-md md:w-1/3"
           />
         </div>
       </section>

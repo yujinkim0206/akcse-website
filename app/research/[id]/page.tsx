@@ -51,13 +51,13 @@ export default async function ProjectDetail({ params }: Props) {
       />
       <div className="wrap mx-auto flex max-w-4xl flex-row">
         <div className="min-h-screen w-full bg-white pb-[5%]">
-          <h1 className="mx-auto mt-[32px] text-center text-5xl font-bold tracking-tight md:max-w-[75%]">
+          <h1 className="mx-auto mt-12 text-center text-4xl md:text-5xl font-medium tracking-tight md:max-w-[75%]">
             {data.title}
           </h1>
-          <p className="mx-auto mt-[16px] text-center text-sm text-[var(--subtitle)] md:max-w-[75%]">
+          <p className="mx-auto mt-3 text-center text-[var(--subtitle)] md:max-w-[75%]">
             {data.published_date.split("T")[0]}
           </p>
-          <div className="mx-auto mt-[16px] md:max-w-[75%]">
+          <div className="mx-auto mt-3 md:max-w-[75%]">
             {data.article_data?.map(
               (
                 article: {

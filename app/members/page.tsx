@@ -77,25 +77,25 @@ export default function MembersPage() {
           className="w-45 h-55 object-cover mx-auto mb-2"
         />
       )}
-      <p className="text-md">{member.name}</p>
-      <p className="text-sm text-[var(--subtitle)]">{member.role}</p>
-      <p className="text-sm text-[var(--subtitle)]">{member.grade}</p>
-      <p className="text-sm text-[var(--subtitle)]">{member.major}</p>
+      <p className="text-lg font-medium mb-0.5">{member.name}</p>
+      <p className="text-sm text-[var(--subtitle)] mb-0.5">{member.role}</p>
+      <p className="text-sm text-[var(--subtitle)] mb-0.5">{member.grade}</p>
+      <p className="text-sm text-[var(--subtitle)] mb-0.5">{member.major}</p>
 
     </div>
   );
 
   return (
     <main className="bg-white">
-      <section className="pt-28 pb-20 text-center px-6 md:px-20">
-          <h1 className="text-5xl font-light-mb-6 text-black mt-20 mb-2">Our Team</h1>
-          <p className="text-black text-lg px-6 max-w-5xl mx-auto">
+      <section className="pt-35 pb-10 text-center px-6 md:px-20">
+          <h1 className="text-4xl md:text-5xl font-light mb-4 md:mb-6 text-black mt-20">Our Team</h1>
+          <p className="text-black px-6 max-w-5xl mx-auto">
             AKCSE UofT is run by passionate student leaders committed to supporting the
             academic, professional, and personal growth of Korean-Canadian students in STEM.
           </p>
       </section>
 
-      <div className="px-6 md:px-20 py-16 space-y-24">
+      <div className="px-6 md:px-20 py-16 mb-14 md:mb-22 space-y-24">
         {sections.map((section) => {
           const leaders = section.members.filter((m) => m.role === "President" || m.role === "Director");
           const executives = section.members.filter((m) => m.role !== "President" && m.role !== "Director");
