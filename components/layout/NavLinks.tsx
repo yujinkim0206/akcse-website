@@ -38,6 +38,10 @@ export default function NavLinks({
 
   const v = variants[variant];
 
+  const isLinkActive = (href: string) => {
+    return href === "/" ? pathname === "/" : pathname.startsWith(href);
+  };
+
   return (
     <nav className={v.container}>
       {links.map((link) => (
@@ -46,7 +50,7 @@ export default function NavLinks({
           href={link.href}
           className={clsx(
             v.linkClassName,
-            pathname === link.href ? v.activeClassName : v.inactiveClassName,
+            isLinkActive(link.href) ? v.activeClassName : v.inactiveClassName,
           )}
           onClick={onLinkClick}
         >

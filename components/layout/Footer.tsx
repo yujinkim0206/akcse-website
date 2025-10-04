@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="footer bg-black py-12 text-white">
       <div className="wrap grid grid-cols-1 gap-8 md:grid-cols-4">
         <div className="mb-8 md:col-span-2">
-          <p className="origin-top scale-y-120 transform text-2xl leading-none tracking-tighter">
+          <p className="text-3xl leading-none tracking-tighter">
             Association of Korean-Canadian <br />
             Scientists and Engineers at the <br />
             University of Toronto
