@@ -10,12 +10,6 @@ import LinkBlock from "./ArticleBlocks/LinkBlock";
 import config from "@/app/config";
 import { createClient } from "@supabase/supabase-js";
 
-type Props = {
-  params: {
-    id: string;
-  };
-};
-
 const supabaseUrl = config.supabaseUrl;
 const supabaseKey = config.supabaseKey;
 const options = {
@@ -25,7 +19,7 @@ const options = {
 };
 const supabase = createClient(supabaseUrl, supabaseKey, options);
 
-export default async function ProjectDetail({ params }: Props) {
+export default async function ProjectDetail({ params }: {params: Promise<{ id: string }>;}) {
   const { id } = await params;
   const { data, error } = await supabase
     .from("research")
