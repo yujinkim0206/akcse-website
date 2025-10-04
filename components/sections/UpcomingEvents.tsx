@@ -1,5 +1,4 @@
 import UpcomingEvent from "../ui/UpcomingEvent";
-import Image from "next/image";
 import UpcomingEventsImage from "../ui/UpcomingEventsImage";
 
 export default async function UpcomingEvents() {
