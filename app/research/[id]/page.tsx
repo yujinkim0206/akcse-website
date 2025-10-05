@@ -45,7 +45,7 @@ export default async function ProjectDetail({ params }: {params: Promise<{ id: s
       />
       <div className="wrap mx-auto flex max-w-4xl flex-row">
         <div className="min-h-screen w-full bg-white pb-[5%]">
-          <h1 className="mx-auto mt-8 sm:mt-12 text-center text-2xl sm:text-5xl font-medium tracking-tight md:max-w-[75%]">
+          <h1 className="mx-auto mt-8 sm:mt-12 text-center text-2xl sm:text-5xl font-semibold sm:font-medium tracking-tight md:max-w-[75%]">
             {data.title}
           </h1>
           <p className="mx-auto mt-1 sm:mt-3 text-center text-[var(--subtitle)] md:max-w-[75%]">

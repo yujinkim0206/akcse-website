@@ -3,9 +3,16 @@ import Button from "@/components/ui/Button";
 export default function Hero() {
   return (
     <section className="flex h-[calc(100vh*2/3)] items-end justify-between gap-10 px-4 md:px-6 py-4">
-      <h2 className="shrink-0 text-[6vw] sm:text-[clamp(1.875rem,5vw,3rem)] leading-none font-extralight tracking-tighter">
+      <h2 className="hidden sm:block shrink-0 text-[clamp(1.875rem,5vw,3rem)] leading-none font-extralight tracking-tighter">
         Association of Korean-Canadian <br />
         Scientists and Engineers at the <br />
+        University of Toronto
+      </h2>
+      <h2 className="sm:hidden shrink-0 text-[9vw] leading-none font-extralight tracking-tighter">
+        Association of <br />
+        Korean-Canadian <br />
+        Scientists and <br />
+        Engineers at the <br />
         University of Toronto
       </h2>
       <div className="hidden w-1/2 flex-col items-end xl:flex">
