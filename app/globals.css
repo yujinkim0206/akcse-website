@@ -30,14 +30,14 @@
 
   @media (max-width: 1024px) {
     :root {
-      --card-height: 520px;
+      --card-height: 600px;
       --card-width: calc(var(--card-height) * 3 / 4);
     }
   }
 
   @media (max-width: 640px) {
     :root {
-      --card-height: 420px;
+      --card-height: 520px;
       --card-width: calc(var(--card-height) * 3 / 4);
     }
   }
@@ -53,11 +53,11 @@
   }
 
   .section-heading {
-    @apply mb-2 sm:mb-4 text-2xl md:mb-6 md:text-3xl;
+    @apply mb-2 text-2xl sm:mb-6 sm:text-3xl;
   }
 
   .section-spacing {
-    @apply mb-20 sm:mb-30 md:mb-38;
+    @apply mb-20 md:mb-38;
   }
 
   .listing-card {
