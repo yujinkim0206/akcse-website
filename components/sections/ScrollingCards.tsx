@@ -17,14 +17,14 @@ export default function ScrollingCards() {
   return (
     <section className="overflow-hidden section-spacing">
       <div
-        className="flex w-max h-[var(--card-height)] md:h-[var(--card-height-hover)] animate-[marquee_linear_infinite] items-center justify-center will-change-transform"
+        className="flex w-max h-[var(--card-height)] lg:h-[var(--card-height-hover)] animate-[marquee_linear_infinite] items-center justify-center will-change-transform"
         style={{ animationDuration: `${DURATION}s` }}
         onContextMenu={(e) => e.preventDefault()}
       >
         {doubled.map((item, i) => (
           <div
             key={i}
-            className="relative aspect-[3/4] h-[var(--card-height)] shrink-0 overflow-hidden transition-all duration-300 md:hover:h-[var(--card-height-hover)]"
+            className="relative aspect-[3/4] h-[var(--card-height)] shrink-0 overflow-hidden transition-all duration-300 lg:hover:h-[var(--card-height-hover)]"
           >
             <div className="absolute top-1/2 left-1/2 h-full w-[calc(var(--card-width)*4)] -translate-x-1/2 -translate-y-1/2">
               <img
