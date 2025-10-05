@@ -1,3 +1,5 @@
+"use client";
+
 export default function ScrollingCards() {
   const items = [
     { src: "/images/card1.jpg", alt: "" },
@@ -17,17 +19,19 @@ export default function ScrollingCards() {
       <div
         className="flex w-max h-[var(--card-height-hover)] animate-[marquee_linear_infinite] items-center justify-center will-change-transform"
         style={{ animationDuration: `${DURATION}s` }}
+        onContextMenu={(e) => e.preventDefault()}
       >
         {doubled.map((item, i) => (
           <div
             key={i}
-            className="relative aspect-[3/4] h-[var(--card-height)] shrink-0 overflow-hidden transition-all duration-300 hover:h-[var(--card-height-hover)] active:h-[var(--card-height-hover)] touch-none select-none"
+            className="relative aspect-[3/4] h-[var(--card-height)] shrink-0 overflow-hidden transition-all duration-300 hover:h-[var(--card-height-hover)] touch-none"
           >
             <div className="absolute top-1/2 left-1/2 h-[var(--card-height-hover)] w-[calc(var(--card-width)*4)] -translate-x-1/2 -translate-y-1/2">
               <img
                 src={item.src}
                 alt={item.alt}
-                className="h-full w-full animate-[inner-marquee_linear_infinite] object-cover will-change-transform"
+                draggable={false}
+                className="h-full w-full animate-[inner-marquee_linear_infinite] object-cover will-change-transform pointer-events-none select-none [-webkit-user-drag:none] [-webkit-touch-callout:none]"
                 style={{
                   animationDuration: `${DURATION}s`,
                   animationDelay: `-${DURATION - (i + 1) * CARD_LENGTH}s`,

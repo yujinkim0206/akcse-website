@@ -11,7 +11,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 to-transparent">
           <div className="mx-auto flex h-full max-w-[90rem] items-center justify-start px-6">
             <div className="w-full text-white md:w-[40%]">
-              <h1 className="mb-4 md:mb-6 text-4xl md:text-5xl font-light">About Us</h1>
+              <h1 className="mb-2 sm:mb-6 text-3xl md:text-5xl font-light">About Us</h1>
               <p className="leading-7">
                 Founded in 1986, Association of Korean-Canadian Scientists and
                 Engineers (AKCSE) is a non-profit professional organization that
@@ -29,7 +29,7 @@ export default function AboutPage() {
       <section className="section-spacing mx-auto flex w-[100vw] flex-col items-center justify-center px-6">
         {/* 오른쪽: 비전 설명 */}
         <div className="flex max-w-xl flex-col text-center">
-          <h2 className="mb-4 md:mb-6 text-4xl md:text-5xl font-light">Our Vision</h2>
+          <h2 className="mb-2 sm:mb-6 text-3xl md:text-5xl font-light">Our Vision</h2>
           <p className="mb-4 leading-7">
             At AKCSE UofT, we envision a community where Korean-Canadian students in STEM feel seen, supported,
             and inspired.

@@ -88,7 +88,7 @@ export default function MembersPage() {
   return (
     <main className="bg-white">
       <section className="pt-35 pb-10 text-center px-6 md:px-20">
-          <h1 className="text-4xl md:text-5xl font-light mb-4 md:mb-6 text-black mt-20">Our Team</h1>
+          <h1 className="mb-2 sm:mb-6 text-3xl md:text-5xl font-light text-black mt-20">Our Team</h1>
           <p className="text-black px-6 max-w-5xl mx-auto">
             AKCSE UofT is run by passionate student leaders committed to supporting the
             academic, professional, and personal growth of Korean-Canadian students in STEM.
@@ -102,7 +102,7 @@ export default function MembersPage() {
           
           return (
             <div key={section.title} className="max-w-6xl mx-auto text-center space-y-8 bg-gray-100 p-8">
-              <h2 className="text-3xl mb-6 text-center">
+              <h2 className="text-2xl sm:text-3xl mb-6 text-center">
                 <span className="relative inline-block">
                 <span className="absolute inset-0 bg-blue-200 -z-10 w-full h-full" />
                 {section.title}
