@@ -8,7 +8,7 @@ export default function Hero() {
         Scientists and Engineers at the <br />
         University of Toronto
       </h2>
-      <h2 className="sm:hidden shrink-0 text-[9vw] leading-none font-extralight tracking-tighter">
+      <h2 className="sm:hidden shrink-0 text-[9vw] leading-none font-thin tracking-tighter">
         Association of <br />
         Korean-Canadian <br />
         Scientists and <br />
