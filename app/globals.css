@@ -9,6 +9,7 @@
     --hover-black: #737373;
     --hover-white: #d4d4d4;
     --header: 72px;
+    --header-m: 60px;
     --vertical-spacing: 8rem;
     --grow: 30px;
     --card-height: calc(80vh - var(--grow));
@@ -30,7 +31,7 @@
 
 @layer components {
   .wrap {
-    @apply mx-auto max-w-7xl px-6;
+    @apply mx-auto max-w-7xl px-4 sm:px-6;
   }
 
   .footer * {
@@ -38,11 +39,11 @@
   }
 
   .section-heading {
-    @apply mb-4 text-3xl md:mb-6 md:text-3xl;
+    @apply mb-2 sm:mb-4 text-2xl md:mb-6 md:text-3xl;
   }
 
   .section-spacing {
-    @apply mb-30 md:mb-38;
+    @apply mb-20 sm:mb-30 md:mb-38;
   }
 
   .listing-card {

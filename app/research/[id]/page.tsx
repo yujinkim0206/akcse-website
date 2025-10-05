@@ -41,17 +41,17 @@ export default async function ProjectDetail({ params }: {params: Promise<{ id: s
     <main className="bg-background">
       <img
         src={data.preview_img_src}
-        className="mx-auto mt-[var(--header)] w-full max-w-4xl bg-white object-cover lg:aspect-auto lg:h-120"
+        className="mx-auto mt-[var(--header-m)] sm:mt-[var(--header)] w-full max-w-4xl bg-white object-cover lg:aspect-auto lg:h-120"
       />
       <div className="wrap mx-auto flex max-w-4xl flex-row">
         <div className="min-h-screen w-full bg-white pb-[5%]">
-          <h1 className="mx-auto mt-12 text-center text-4xl md:text-5xl font-medium tracking-tight md:max-w-[75%]">
+          <h1 className="mx-auto mt-8 sm:mt-12 text-center text-2xl sm:text-5xl font-medium tracking-tight md:max-w-[75%]">
             {data.title}
           </h1>
-          <p className="mx-auto mt-3 text-center text-[var(--subtitle)] md:max-w-[75%]">
+          <p className="mx-auto mt-1 sm:mt-3 text-center text-[var(--subtitle)] md:max-w-[75%]">
             {data.published_date.split("T")[0]}
           </p>
-          <div className="mx-auto mt-3 md:max-w-[75%]">
+          <div className="mx-auto mt-1 sm:mt-3 md:max-w-[75%]">
             {data.article_data?.map(
               (
                 article: {

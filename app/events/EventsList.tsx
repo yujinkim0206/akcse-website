@@ -25,7 +25,7 @@ export default async function EventsList() {
         <p className="text-red-500">Failed to load data: {error.message}</p>
       )}
       <div className="py-16 sm:py-24">
-        <h1 className="mb-2 md:mb-4 text-4xl md:text-5xl font-light">Events</h1>
+        <h1 className="mb-1 sm:mb-4 text-3xl sm:text-5xl font-light">Events</h1>
         <h4 className="text-[var(--subtitle)]">
           Past educational and social events at AKCSE UofT
         </h4>
