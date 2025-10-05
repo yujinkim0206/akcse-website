@@ -14,7 +14,7 @@ export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="absolute inset-x-0 top-0 z-50 h-[var(--header-m)] sm:h-[var(--header)] bg-white">
+    <header className="fixed sm:absolute inset-x-0 top-0 z-50 h-[var(--header-m)] sm:h-[var(--header)] bg-white">
       <div className="px-4 sm:px-6 flex h-full items-center justify-between">
         <Link href="/" className="relative w-40 h-auto">
           <Image src="/images/logo.png" alt="AKCSE Logo" width={2608} height={2067} className="w-[40px] sm:w-[45px] h-auto" sizes="(min-width: 640px) 45px, 40px" />

@@ -3,8 +3,8 @@ import AKCSEFooterSocial from "./AKCSEFooterSocial";
 
 export default function Footer() {
   return (
-    <footer className="footer bg-black py-12 text-white">
-      <div className="wrap grid grid-cols-1 gap-8 md:grid-cols-4">
+    <footer className="footer bg-black py-8 sm:py-12 text-white">
+      <div className="wrap grid grid-cols-1 gap-4 sm:gap-8 md:grid-cols-4">
         <div className="mb-2 sm:mb-8 md:col-span-2">
           <p className="text-xl sm:text-3xl leading-none tracking-tighter">
             Association of Korean-Canadian <br />
