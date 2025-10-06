@@ -108,7 +108,7 @@ export default function MembersPage() {
           
           return (
             <div key={section.title} className="max-w-6xl mx-auto text-center space-y-8 bg-gray-100 p-8">
-              <h2 className="text-2xl font-light sm:text-3xl mb-6 text-center">
+              <h2 className="text-2xl font-light sm:font-normal sm:text-3xl mb-6 text-center">
                 <span className="relative inline-block">
                 <span className="absolute inset-0 bg-blue-200 -z-10 w-full h-full" />
                 {section.title}

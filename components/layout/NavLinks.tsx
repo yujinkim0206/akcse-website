@@ -30,7 +30,7 @@ export default function NavLinks({
     },
     mobile: {
       container: "flex flex-col gap-3",
-      linkClassName: "text-2xl tracking-tight transition-colors duration-200 hover:text-[var(--hover-black)]",
+      linkClassName: "text-2xl transition-colors duration-200 hover:text-[var(--hover-black)]",
       activeClassName: "-skew-x-12",
       inactiveClassName: "skew-x-0",
     },

@@ -57,7 +57,7 @@
   }
 
   .section-spacing {
-    @apply mb-20 md:mb-38;
+    @apply mb-20 md:mb-32;
   }
 
   .listing-card {
