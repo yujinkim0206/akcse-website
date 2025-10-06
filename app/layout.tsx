@@ -17,6 +17,14 @@ export const metadata: Metadata = {
       "Connecting Korean-Canadian students in STEM through academic, professional, and cultural initiatives.",
     url: "", // fix url
     siteName: "AKCSE UofT",
+    images: [
+      {
+        url: "/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "",
+      },
+    ],
   },
 };
 
