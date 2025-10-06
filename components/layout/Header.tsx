@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import NavLinks from "./NavLinks";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import HamburgerButton from "./HamburgerButton";
 import clsx from "clsx";
 import AKCSEUofTHeaderSocial from "./AKCSEUofTHeaderSocial";
@@ -12,6 +12,13 @@ import EmailCopy from "./EmailCopy";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
   return (
     <header className="fixed sm:absolute inset-x-0 top-0 z-50 h-[var(--header-m)] sm:h-[var(--header)] bg-white">
@@ -24,10 +31,6 @@ export default function NavBar() {
         <div className="hidden lg:block">
           <NavLinks variant="desktop" />
         </div>
-
-        {/* <div className="hidden lg:block">
-          <SearchBar />
-        </div> */}
 
         {/* mobile */}
         <div className="block lg:hidden">
