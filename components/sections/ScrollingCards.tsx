@@ -7,7 +7,6 @@ export default function ScrollingCards() {
     { src: "/images/card3.jpg", alt: "" },
     { src: "/images/card4.jpg", alt: "" },
     { src: "/images/card5.jpg", alt: "" },
-    { src: "/images/card6.jpg", alt: "" },
   ];
 
   const doubled = [...items, ...items];
