@@ -38,7 +38,7 @@ export default async function ProjectDetail({ params }: {params: Promise<{ id: s
     );
   }
   return (
-    <main className="bg-background">
+    <main className="bg-background overflow-x-hidden">
       <img
         src={data.preview_img_src}
         className="mx-auto mt-[var(--header-m)] sm:mt-[var(--header)] w-full max-w-4xl bg-white object-cover lg:aspect-auto lg:h-120"

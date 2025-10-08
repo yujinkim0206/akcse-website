@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   },
   description:
     "The Association of Korean-Canadian Scientists and Engineers at the University of Toronto supports Korean-Canadian students in STEM through academic, professional, and cultural initiatives.",
-  // metadataBase: new URL(url), // fix url
+  metadataBase: new URL("https://akcseuoft.ca/"),
   openGraph: {
     title: "AKCSE UofT",
     description:
       "The Association of Korean-Canadian Scientists and Engineers at the University of Toronto",
-    url: "", // fix url
+    url: "https://akcseuoft.ca/",
     siteName: "AKCSE UofT",
     images: [
       {
