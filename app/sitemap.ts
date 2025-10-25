@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { supabase } from "@/lib/supabaseClient";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const url = "https://akcseuoft.ca/";
+  const url = "https://akcseuoft.ca";
 
   const staticUrls: MetadataRoute.Sitemap = [
     {

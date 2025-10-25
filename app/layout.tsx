@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: "AKCSE UofT",
     description:
       "The Association of Korean-Canadian Scientists and Engineers at the University of Toronto",
-    url: "https://akcseuoft.ca/",
+    url: "https://akcseuoft.ca",
     siteName: "AKCSE UofT",
     images: [
       {
