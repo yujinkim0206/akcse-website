@@ -8,7 +8,7 @@ export default function AboutPage() {
   return (
     <main className="bg-white text-gray-800">
       {/* Hero Section */}
-      <section className="section-spacing relative h-[100vh] w-full overflow-hidden">
+      <section className="section-spacing relative h-[100dvh] w-full overflow-hidden">
         <img
           src="/images/jason-uoft.jpg"
           alt=""
