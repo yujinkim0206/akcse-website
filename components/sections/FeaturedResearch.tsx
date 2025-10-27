@@ -56,8 +56,7 @@ export default async function FeaturedResearch() {
           className="object-cover"
           fill
           sizes="(min-width:768px) 45%, 100vw"
-          unoptimized 
-          // delete above after getting proper image URL
+          unoptimized
         />
       </div>
     </section>
