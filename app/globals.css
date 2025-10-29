@@ -14,7 +14,7 @@
     --grow: 30px;
     --card-height: calc(80vh - var(--grow));
     --card-height-hover: 80vh;
-    --card-width: calc(var(--card-height)*3/4);
+    --card-width: calc(var(--card-height) * 3 / 4);
   }
 
   html {

@@ -2,13 +2,13 @@ import Button from "@/components/ui/Button";
 
 export default function Hero() {
   return (
-    <section className="flex h-[calc(100vh*2/3)] items-end justify-between gap-10 px-4 md:px-6 py-4">
-      <h2 className="hidden sm:block shrink-0 text-[clamp(1.875rem,5vw,3rem)] leading-none font-extralight tracking-tighter">
+    <section className="flex h-[calc(100vh*2/3)] items-end justify-between gap-10 px-4 py-4 md:px-6">
+      <h2 className="hidden shrink-0 text-[clamp(1.875rem,5vw,3rem)] leading-none font-extralight tracking-tighter sm:block">
         Association of Korean-Canadian <br />
         Scientists and Engineers at the <br />
         University of Toronto
       </h2>
-      <h2 className="sm:hidden shrink-0 text-[9vw] leading-none font-thin tracking-tighter">
+      <h2 className="shrink-0 text-[9vw] leading-none font-extralight tracking-tighter sm:hidden">
         Association of <br />
         Korean-Canadian <br />
         Scientists and <br />
