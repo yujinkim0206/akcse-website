@@ -60,6 +60,7 @@ export default async function ProjectDetail({ params }: {params: Promise<{ id: s
                   header: string;
                   text: string;
                   image_src: string;
+                  image_description: string; 
                   video_src: string;
                   link: string;
                   link_title: string;
