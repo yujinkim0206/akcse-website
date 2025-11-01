@@ -24,19 +24,23 @@ export default function NavLinks({
   const variants = {
     desktop: {
       container: "flex gap-8",
-      linkClassName: "text-sm tracking-tighter transition-colors duration-200 hover:text-[var(--hover-black)]",
+      linkClassName: "text-md tracking-tighter transition-colors duration-200 hover:text-[var(--hover-black)]",
       activeClassName: "-skew-x-12",
       inactiveClassName: "skew-x-0",
     },
     mobile: {
       container: "flex flex-col gap-3",
-      linkClassName: "text-2xl tracking-tight transition-colors duration-200 hover:text-[var(--hover-black)]",
+      linkClassName: "text-2xl transition-colors duration-200 hover:text-[var(--hover-black)]",
       activeClassName: "-skew-x-12",
       inactiveClassName: "skew-x-0",
     },
   };
 
   const v = variants[variant];
+
+  const isLinkActive = (href: string) => {
+    return href === "/" ? pathname === "/" : pathname.startsWith(href);
+  };
 
   return (
     <nav className={v.container}>
@@ -46,7 +50,7 @@ export default function NavLinks({
           href={link.href}
           className={clsx(
             v.linkClassName,
-            pathname === link.href ? v.activeClassName : v.inactiveClassName,
+            isLinkActive(link.href) ? v.activeClassName : v.inactiveClassName,
           )}
           onClick={onLinkClick}
         >

@@ -36,14 +36,15 @@ export default async function FeaturedResearch() {
     )
     ?.map(
       (article : Article) => article.text,
-    );
+    )
+    ?.join(" ");
 
   return (
     <section className="wrap section-spacing flex flex-col items-center justify-between gap-12 md:flex-row md:gap-0">
       <div className="md:w-[50%]">
-        <h2 className="text-sm mb-2 text-[var(--subtitle)]">Featured this month</h2>
+        <h2 className="text-sm mb-1 sm:mb-2 text-[var(--subtitle)]">Featured this month</h2>
         <h3 className="section-heading">{data.title}</h3>
-        <p className="mb-8 line-clamp-5">{texts}</p>
+        <p className="mb-6 sm:mb-8 line-clamp-5">{texts}</p>
         <Button href={`/research/${data.id}`} theme="black">
           Learn More
         </Button>
@@ -55,8 +56,7 @@ export default async function FeaturedResearch() {
           className="object-cover"
           fill
           sizes="(min-width:768px) 45%, 100vw"
-          unoptimized 
-          // delete above after getting proper image URL
+          unoptimized
         />
       </div>
     </section>

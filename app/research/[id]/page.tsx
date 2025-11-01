@@ -10,12 +10,6 @@ import LinkBlock from "./ArticleBlocks/LinkBlock";
 import config from "@/app/config";
 import { createClient } from "@supabase/supabase-js";
 
-type Props = {
-  params: {
-    id: string;
-  };
-};
-
 const supabaseUrl = config.supabaseUrl;
 const supabaseKey = config.supabaseKey;
 const options = {
@@ -25,15 +19,7 @@ const options = {
 };
 const supabase = createClient(supabaseUrl, supabaseKey, options);
 
-<<<<<<< Updated upstream
-export default async function ProjectDetail({ params }: Props) {
-=======
-export default async function ProjectDetail({
-  params,
-}: {
-  params: Promise<{ id: string }>;
-}) {
->>>>>>> Stashed changes
+export default async function ProjectDetail({ params }: {params: Promise<{ id: string }>;}) {
   const { id } = await params;
   const { data, error } = await supabase
     .from("research")
@@ -52,31 +38,20 @@ export default async function ProjectDetail({
     );
   }
   return (
-    <main className="bg-background">
+    <main className="bg-background overflow-x-hidden">
       <img
         src={data.preview_img_src}
-<<<<<<< Updated upstream
         className="mx-auto mt-[var(--header)] w-full max-w-4xl bg-white object-cover lg:aspect-auto lg:h-120"
       />
       <div className="wrap mx-auto flex max-w-4xl flex-row">
         <div className="min-h-screen w-full bg-white pb-[5%]">
-          <h1 className="mx-auto mt-[32px] text-center text-5xl font-bold tracking-tight md:max-w-[75%]">
+          <h1 className="mx-auto mt-8 sm:mt-12 text-center text-2xl sm:text-5xl font-semibold sm:font-medium tracking-tight md:max-w-[75%]">
             {data.title}
           </h1>
-          <p className="mx-auto mt-[16px] text-center text-sm text-[var(--subtitle)] md:max-w-[75%]">
-=======
-        className="mx-auto mt-[var(--header-m)] w-full max-w-4xl bg-white object-cover sm:mt-[var(--header)] lg:aspect-auto lg:h-120"
-      />
-      <div className="wrap mx-auto flex max-w-4xl flex-row">
-        <div className="min-h-screen w-full bg-white pb-[5%]">
-          <h1 className="mx-auto mt-8 text-center text-2xl font-semibold tracking-tight sm:mt-12 sm:text-5xl sm:font-medium md:max-w-[75%]">
-            {data.title}
-          </h1>
-          <p className="mx-auto mt-1 text-center text-[var(--subtitle)] sm:mt-3 md:max-w-[75%]">
->>>>>>> Stashed changes
+          <p className="mx-auto mt-1 sm:mt-3 text-center text-[var(--subtitle)] md:max-w-[75%]">
             {data.published_date.split("T")[0]}
           </p>
-          <div className="mx-auto mt-[16px] md:max-w-[75%]">
+          <div className="mx-auto mt-1 sm:mt-3 md:max-w-[75%]">
             {data.article_data?.map(
               (
                 article: {

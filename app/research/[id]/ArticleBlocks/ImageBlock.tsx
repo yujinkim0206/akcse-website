@@ -6,7 +6,7 @@ export default function ImageBlock({
   image_description?: string | null;
 }) {
   return (
-    <div className="mt-[16px] mb-[16px]">
+    <div className="my-10">
       <img
         src={image_src}
         className="mx-auto max-w-[75%] bg-gray-200 object-cover lg:aspect-auto"

@@ -9,6 +9,7 @@
     --hover-black: #737373;
     --hover-white: #d4d4d4;
     --header: 72px;
+    --header-m: 60px;
     --vertical-spacing: 8rem;
     --grow: 30px;
     --card-height: calc(80vh - var(--grow));
@@ -26,11 +27,25 @@
     /*font-family: Arial, Helvetica, sans-serif;*/
     font-family: "Inter", sans-serif;
   }
+
+  @media (max-width: 1024px) {
+    :root {
+      --card-height: 600px;
+      --card-width: calc(var(--card-height) * 3 / 4);
+    }
+  }
+
+  @media (max-width: 640px) {
+    :root {
+      --card-height: 520px;
+      --card-width: calc(var(--card-height) * 3 / 4);
+    }
+  }
 }
 
 @layer components {
   .wrap {
-    @apply mx-auto max-w-7xl px-6;
+    @apply mx-auto max-w-7xl px-4 sm:px-6;
   }
 
   .footer * {
@@ -38,11 +53,11 @@
   }
 
   .section-heading {
-    @apply mb-4 text-3xl md:mb-6 md:text-3xl origin-top scale-y-110 transform;
+    @apply mb-2 text-2xl sm:mb-6 sm:text-3xl;
   }
 
   .section-spacing {
-    @apply mb-30 md:mb-46;
+    @apply mb-20 md:mb-32;
   }
 
   .listing-card {
@@ -54,7 +69,7 @@
   }
 
   .upcoming-events-cards {
-    @apply mt-15 md:w-[60%];
+    @apply md:mt-15 md:w-[60%];
   }
 }
 
