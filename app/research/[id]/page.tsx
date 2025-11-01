@@ -25,15 +25,11 @@ const options = {
 };
 const supabase = createClient(supabaseUrl, supabaseKey, options);
 
-<<<<<<< Updated upstream
-export default async function ProjectDetail({ params }: Props) {
-=======
 export default async function ProjectDetail({
   params,
 }: {
   params: Promise<{ id: string }>;
 }) {
->>>>>>> Stashed changes
   const { id } = await params;
   const { data, error } = await supabase
     .from("research")
@@ -55,16 +51,6 @@ export default async function ProjectDetail({
     <main className="bg-background">
       <img
         src={data.preview_img_src}
-<<<<<<< Updated upstream
-        className="mx-auto mt-[var(--header)] w-full max-w-4xl bg-white object-cover lg:aspect-auto lg:h-120"
-      />
-      <div className="wrap mx-auto flex max-w-4xl flex-row">
-        <div className="min-h-screen w-full bg-white pb-[5%]">
-          <h1 className="mx-auto mt-[32px] text-center text-5xl font-bold tracking-tight md:max-w-[75%]">
-            {data.title}
-          </h1>
-          <p className="mx-auto mt-[16px] text-center text-sm text-[var(--subtitle)] md:max-w-[75%]">
-=======
         className="mx-auto mt-[var(--header-m)] w-full max-w-4xl bg-white object-cover sm:mt-[var(--header)] lg:aspect-auto lg:h-120"
       />
       <div className="wrap mx-auto flex max-w-4xl flex-row">
@@ -73,7 +59,6 @@ export default async function ProjectDetail({
             {data.title}
           </h1>
           <p className="mx-auto mt-1 text-center text-[var(--subtitle)] sm:mt-3 md:max-w-[75%]">
->>>>>>> Stashed changes
             {data.published_date.split("T")[0]}
           </p>
           <div className="mx-auto mt-[16px] md:max-w-[75%]">
