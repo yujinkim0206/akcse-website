@@ -41,7 +41,7 @@ export default async function ProjectDetail({ params }: {params: Promise<{ id: s
     <main className="bg-background overflow-x-hidden">
       <img
         src={data.preview_img_src}
-        className="mx-auto mt-[var(--header)] w-full max-w-4xl bg-white object-cover lg:aspect-auto lg:h-120"
+        className="mx-auto mt-[var(--header-m)] sm:mt-[var(--header)] w-full max-w-4xl bg-white object-cover lg:aspect-auto lg:h-120"
       />
       <div className="wrap mx-auto flex max-w-4xl flex-row">
         <div className="min-h-screen w-full bg-white pb-[5%]">
@@ -60,7 +60,6 @@ export default async function ProjectDetail({ params }: {params: Promise<{ id: s
                   header: string;
                   text: string;
                   image_src: string;
-                  image_description: string;
                   video_src: string;
                   link: string;
                   link_title: string;
@@ -76,11 +75,7 @@ export default async function ProjectDetail({ params }: {params: Promise<{ id: s
                     return <TextBoldBlock key={index} text={article.text} />;
                   case "image":
                     return (
-                      <ImageBlock
-                        key={index}
-                        image_src={article.image_src}
-                        image_description={article.image_description}
-                      />
+                      <ImageBlock key={index} image_src={article.image_src} />
                     );
                   case "video":
                     return (
