@@ -21,7 +21,7 @@ Table: research
 | `title` | [text] |
 | `subtitle` | [text] |
 | `preview_img_src` | [text] Thumbnail image seen as a card |
-| `article_data` | [jsonb] The data contains a variable type which can be one of the following: [header, text, text-bold, image, video, link]. This structure enables the article to include multiple component types, allowing for easy modification and dynamic rendering by switching between components |
+| `article_data` | [jsonb] The data contains component types:<br>1. `header` "type": "header", "header": {your header} <br>2. `text` "type": "text", "text": {your text}<br>* Superscript can be done by typing `<sup>{superscripted text}</sup>` inside "text" <br>3. `text-bold` "type": "text-bold", "text": {your text}<br>4. `image` "type": "image", "image_src": {image url}, "image_description": {your description} <br>5. `video` "type": "video", "video_src": {video url} <br>6. `link` "type": "link", "link_title": {your title}, "link": {link url} <br><br>This structure enables the article to include multiple component types, allowing for easy modification and dynamic rendering by switching between components|
 | `published_date` | [timestamptz] Initial published date of the article including the timezone (EDT by default) |
 | `last_updated_date` | [timestamptz] Last modified date of the article including the timezone (EDT by default) |
 | `published` | [bool] Used to control whether the visibility of the article is public or private |
