@@ -80,7 +80,11 @@ export default async function ProjectDetail({
                     return <TextBoldBlock key={index} text={article.text} />;
                   case "image":
                     return (
-                      <ImageBlock key={index} image_src={article.image_src} />
+                      <ImageBlock
+                        key={index}
+                        image_src={article.image_src}
+                        image_description={article.image_description}
+                      />
                     );
                   case "video":
                     return (
