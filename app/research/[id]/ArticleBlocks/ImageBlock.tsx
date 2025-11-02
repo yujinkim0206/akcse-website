@@ -1,4 +1,10 @@
-export default function ImageBlock({ image_src }: { image_src: string }) {
+export default function ImageBlock({
+  image_src,
+  image_description,
+}: {
+  image_src: string;
+  image_description?: string | null;
+}) {
   return (
     <div className="my-10">
       <img
