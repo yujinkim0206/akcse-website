@@ -41,7 +41,7 @@ export default function Sponsors() {
   ];
   return (
     <section className="wrap section-spacing">
-      <h2 className="section-heading">Our Sponsors</h2>
+      <h2 className="section-heading mb-6 sm:mb-10">Our Sponsors</h2>
       <div className="grid grid-cols-2 gap-6 md:gap-10 md:grid-cols-3">
         {sponsors.map((sponsor, i) => (
           <Sponsor

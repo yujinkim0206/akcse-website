@@ -11,7 +11,7 @@ export default function LinkBlock({
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="text block text-blue-600 hover:underline"
+        className="text block text-blue-600 hover:underline break-all"
       >
         {link_title}
       </a>

@@ -10,12 +10,6 @@ import LinkBlock from "./ArticleBlocks/LinkBlock";
 import config from "@/app/config";
 import { createClient } from "@supabase/supabase-js";
 
-type Props = {
-  params: {
-    id: string;
-  };
-};
-
 const supabaseUrl = config.supabaseUrl;
 const supabaseKey = config.supabaseKey;
 const options = {
@@ -48,7 +42,7 @@ export default async function ProjectDetail({
     );
   }
   return (
-    <main className="bg-background">
+    <main className="bg-background overflow-x-hidden">
       <img
         src={data.preview_img_src}
         className="mx-auto mt-[var(--header-m)] w-full max-w-4xl bg-white object-cover sm:mt-[var(--header)] lg:aspect-auto lg:h-120"
@@ -61,7 +55,7 @@ export default async function ProjectDetail({
           <p className="mx-auto mt-1 text-center text-[var(--subtitle)] sm:mt-3 md:max-w-[75%]">
             {data.published_date.split("T")[0]}
           </p>
-          <div className="mx-auto mt-[16px] md:max-w-[75%]">
+          <div className="mx-auto mt-1 sm:mt-3 md:max-w-[75%]">
             {data.article_data?.map(
               (
                 article: {
@@ -70,7 +64,7 @@ export default async function ProjectDetail({
                   header: string;
                   text: string;
                   image_src: string;
-                  image_description: string;
+                  image_description: string; 
                   video_src: string;
                   link: string;
                   link_title: string;
@@ -86,11 +80,7 @@ export default async function ProjectDetail({
                     return <TextBoldBlock key={index} text={article.text} />;
                   case "image":
                     return (
-                      <ImageBlock
-                        key={index}
-                        image_src={article.image_src}
-                        image_description={article.image_description}
-                      />
+                      <ImageBlock key={index} image_src={article.image_src} />
                     );
                   case "video":
                     return (

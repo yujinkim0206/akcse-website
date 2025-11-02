@@ -24,13 +24,13 @@ export default async function EventsList() {
       {error && (
         <p className="text-red-500">Failed to load data: {error.message}</p>
       )}
-      <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl">
-        <h1 className="mb-2 text-5xl font-light tracking-tight">Events</h1>
-        <h4 className="text-lg text-[var(--subtitle)]">
-          Subtitle subtitle subtitle
+      <div className="py-16 sm:py-24">
+        <h1 className="mb-1 sm:mb-2 text-3xl sm:text-5xl font-light">Events</h1>
+        <h4 className="text-[var(--subtitle)]">
+          Past educational and social events at AKCSE UofT
         </h4>
 
-        <div className="mt-[24px] grid grid-cols-1 gap-x-[24px] gap-y-[40px]">
+        <div className="mt-10 grid grid-cols-1 gap-x-[24px] gap-y-[40px]">
           {data?.map((events) => (
             <EventCard key={events.id} events={events} />
           ))}
