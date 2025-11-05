@@ -12,9 +12,15 @@ export default function Button({
   theme?: "black" | "white" | "transparent";
   external?: boolean;
 }) {
+
+  const linkProps = external
+    ? { target: "_blank", rel: "noopener noreferrer" }
+    : {};
+
   return (
     <Link
       href={href}
+      {...linkProps}
       className={clsx(
         "font-medium",
         theme === "black" && "rounded bg-black px-4 py-3 text-white transition-colors duration-300 hover:text-[var(--hover-white)]",
