@@ -13,8 +13,10 @@ export default function MembersPage() {
       members: [
         { name: "Ryan Baek", role: "Director", grade: "4th year", major: "Biological Physics speacialist - Advanced Physics stream", image: "/images/마케팅_백승주.jpeg" },
         { name: "Jian Huh", role: "Director", grade: "Gap year", major: "Specialist in Architectural Studies", image: "/images/마케팅_허지안.jpg" },
-        { name: "Sarah Park", role: "Executive Member", grade: "1st year", major: "Major not claimed yet", image: "/images/마케팅_박수현.jpg" },
-        { name: "Jenny Kim", role: "Executive Member", grade: "2nd year", major: "Major in Health and Disease & Animal Physiology, Minor in Statistics", image: "/images/마케팅_김제니.jpeg" },
+        { name: "Jenny Kim", role: "Executive", grade: "2nd year", major: "Major in Health and Disease & Animal Physiology, Minor in Statistics", image: "/images/마케팅_김제니.jpeg" },
+        { name: "Sarah Park", role: "Executive", grade: "1st year", major: "Major not claimed yet", image: "/images/마케팅_박수현.jpg" },
+        { name: "Ella Jeong", role: "Intern", grade: "3rd year", major: "Major in Statistics & Economics", image: "/images/마케팅_정다찬.jpg" },
+        { name: "Kaylee Kim", role: "Intern", grade: "1st year", major: "Major in Life Sciences", image: "/images/마케팅_김민채.jpg" },
       ],
     },
     {
@@ -22,9 +24,9 @@ export default function MembersPage() {
       members: [
         { name: "Yoon Park", role: "Director", grade: "4th year", major: "Major in Mathematics & Statistics", image: "/images/파이낸스_박윤서.jpg" },
         { name: "Hanseo Park", role: "Director", grade: "3rd year", major: "Major in Mathematics ", image: "/images/파이낸스_박한서.png" },
-        { name: "Jinwoo Choi", role: "Executive Member", grade: "3rd year", major: "Major in Mathematics & Drama", image: "/images/회계_최진우.png"},
-        { name: "Daeun Lee", role: "Executive Member", grade: "4th year", major: "Major in Human Geography, Minor in Environmentel Geography, East Asain Studies", image: "/images/파이낸스_이다은.jpeg" },
-        { name: "Yerin Lee", role: "Executive Member", grade: "2nd year", major: "Major in Chemical Engineering", image: "/images/파이낸스_이예린.jpg"  },
+        { name: "Daeun Lee", role: "Executive", grade: "4th year", major: "Major in Human Geography, Minor in Environmentel Geography, East Asain Studies", image: "/images/파이낸스_이다은.jpeg" },
+        { name: "Jinwoo Choi", role: "Executive", grade: "3rd year", major: "Major in Mathematics & Drama", image: "/images/회계_최진우.png"},
+        { name: "Yerin Lee", role: "Executive", grade: "2nd year", major: "Major in Chemical Engineering", image: "/images/파이낸스_이예린.jpg"  },
       ],
     },
     {
@@ -32,40 +34,54 @@ export default function MembersPage() {
       members: [
         { name: "Sylvia Park", role: "Director", grade: "3rd year", major: "Major in Global Health & French Language, French Linguistics, minor in Immunology", image: "/images/에듀이벤트_박하연.jpg" },
         { name: "Huiwon Shin", role: "Director", grade: "3rd year", major: "Major in Pharmacology, Minor in Immunology & Physiology", image: "/images/에듀이벤트_신희원.jpg" },
-        { name: "Chaewon Jin", role: "Executive Member", grade: "3rd year", major: "Major in Life Sciences", image: "/images/에듀이벤트_진채원.jpg"},
-        { name: "Aimie Kang", role: "Executive Member", grade: "3rd year", major: "Major in Global Health & Bioethics, Minor in Environmental Ethics", image: "/images/에듀이벤트_강에이미.jpg" },
-        { name: "Heejin Kim", role: "Executive Member", grade: "3rd year", major: "Major in Biomedical Toxicology & Physiology, Minor in Immunology", image: "/images/에듀이벤트_김희진.jpg" },
-        { name: "Min Kim", role: "Executive Member", grade: "2nd year", major: "Specialist in physics, Minor in Mathematics", image: "/images/에듀이벤트_김민호.jpg" }
+        { name: "Chaewon Jin", role: "Executive", grade: "3rd year", major: "Major in Life Sciences", image: "/images/에듀이벤트_진채원.jpg"},
+        { name: "Aimie Kang", role: "Executive", grade: "3rd year", major: "Major in Global Health & Bioethics, Minor in Environmental Ethics", image: "/images/에듀이벤트_강에이미.jpg" },
+        { name: "Heejin Kim", role: "Executive", grade: "3rd year", major: "Major in Biomedical Toxicology & Physiology, Minor in Immunology", image: "/images/에듀이벤트_김희진.jpg" },
+        { name: "Min Kim", role: "Executive", grade: "2nd year", major: "Specialist in physics, Minor in Mathematics", image: "/images/에듀이벤트_김민호.jpg" }
       ],
     },
     {
       title: "Social Events",
       members: [
-        { name: "Ashely Chang", role: "Director", grade: "3rd year", major: "Major in Human Biology, Minor in Immunology & Physiology", image: "/images/소셜이벤트_장다정.jpg" },
         { name: "Jiyu Chae", role: "Director", grade: "4th year", major: "Major in Pharmacology & Cell and Molecular Biology", image: "/images/소셜이벤트_채지유.jpg"  },
-        { name: "Jung Min Son", role: "Executive Member", grade: "2nd year", major: "Major in Quantitative Biology, Minor in Mathematics & Applied Data Science", image: "/images/소셜이벤트_손정민.jpg"  },
-        { name: "Rian Hyeonjin Jeong", role: "Executive Member", grade: "2nd year", major: "Major in Management & Accounting ", image: "/images/소셜이벤트_정현진.jpg"  },
-        { name: "Daniel Yoo", role: "Executive Member", grade: "3rd year", major: "Major in Mechanical Engineering", image: "/images/소셜이벤트_유종상.jpeg"  },
+        { name: "Ashely Chang", role: "Director", grade: "3rd year", major: "Major in Human Biology, Minor in Immunology & Physiology", image: "/images/소셜이벤트_장다정.jpg" },
+        { name: "Daniel Yoo", role: "Executive", grade: "3rd year", major: "Major in Mechanical Engineering", image: "/images/소셜이벤트_유종상.jpeg"  },
+        { name: "Jung Min Son", role: "Executive", grade: "2nd year", major: "Major in Quantitative Biology, Minor in Mathematics & Applied Data Science", image: "/images/소셜이벤트_손정민.jpg"  },
+        { name: "Rian Hyeonjin Jeong", role: "Executive", grade: "2nd year", major: "Major in Management & Accounting ", image: "/images/소셜이벤트_정현진.jpg"  },
+        { name: "Hanna Yim", role: "Intern", grade: "3rd year", major: "Major in Mechanical Engineering", image: "/images/소셜이벤트_임한나.jpg"  },
+        { name: "Byeongmin Nam", role: "Intern", grade: "3rd year", major: "Major in Mechanical Engineering", image: "/images/소셜이벤트_남병민.jpg"  },
+        { name: "Myungbin Son", role: "Intern", grade: "1st year", major: "Major in Life Sciences", image: "/images/소셜이벤트_손명빈.png"  },
+        { name: "Hoseok Lee", role: "Intern", grade: "1st year", major: "Major in Social Sciences", image: "/images/소셜이벤트_이호석.png"  },
       ],
     },
     {
       title: "Programming",
       members: [
         { name: "Yujin Kim", role: "Director", grade: "3rd year", major: "Major in Computer Science & Statistics", image: "/images/프로그래밍_김유진.jpeg"  },
-        { name: "Daniel Kim", role: "Executive Member", grade: "2nd year", major: "Specialist in Mathematics & Its Applications (Probability/Statistics), Minor in Applied Data Science", image: "/images/프로그래밍_김의찬.jpeg" },
-        { name: "Lucy Lee", role: "Executive Member", grade: "2nd year", major: "Major in Mathematics & New Media Studies, Minor in Statistics", image: "/images/프로그래밍_이시영.jpg" },
+        { name: "Daniel Kim", role: "Executive", grade: "2nd year", major: "Specialist in Mathematics & Its Applications (Probability/Statistics), Minor in Applied Data Science", image: "/images/프로그래밍_김의찬.jpeg" },
+        { name: "Lucy Siyoung Lee", role: "Executive", grade: "2nd year", major: "Major in Mathematics & New Media Studies, Minor in Statistics", image: "/images/프로그래밍_이시영.png" },
       ],
     },
     {
-      title: "Research & Literature",
+      title: "Research & Literature (Life Science)",
       members: [
         { name: "Yoon Kang", role: "Director", grade: "4th year", major: "Major in Physiology and Health & Disease", image: "/images/리서치_강윤종.jpg"  },
-        { name: "Ellie Jung", role: "Director", grade: "Gap term", major: "Major in Industrial Engineering", image: "/images/리서치_정여진.jpeg" },
-        { name: "Christine Seo", role: "(Life Science) Executive Member", grade: "3rd year", major: "Major in Neuroscience & Nutritional Science, Minor in Immunology ", image: "/images/리서치_서수연.png" },
-        { name: "Lucas Yoon", role: "(Tech) Executive Member", grade: "2nd year", major: "Major in Mathematics & Statistics", image: "/images/리서치_윤준서.jpg"  },
-        { name: "David Shin", role: "(Tech) Executive Member", grade: "2nd year", major: "Specialist in Mathematics & Its applications (Probability/Statistics), Minor in Statistics", image: "/images/리서치_신승민.jpg"  },
+        { name: "Christine Seo", role: "Director", grade: "3rd year", major: "Major in Neuroscience & Nutritional Science, Minor in Immunology ", image: "/images/리서치_서수연.png" },
+        { name: "Geena Kim", role: "Executive", grade: "3rd year", major: "Specialist in Fundamental Genetics and its Applications, Minor in Immunology", image: "/images/리서치_김지나.jpeg" },        
+        { name: "Seoyun Heo", role: "Executive", grade: "2nd year", major: "Major in Health and Disease & Cell and Molecular Biology, Minor in Immunology", image: "/images/리서치_허서윤.jpg" },
       ],
     },
+    {
+      title: "Research & Literature (Tech)",
+      members: [
+        { name: "Ellie Jung", role: "Director", grade: "Gap term", major: "Major in Industrial Engineering", image: "/images/리서치_정여진.jpeg" },
+        { name: "Lucas Yoon", role: "Executive", grade: "2nd year", major: "Major in Mathematics & Statistics", image: "/images/리서치_윤준서.jpg"  },
+        { name: "David Shin", role: "Executive", grade: "2nd year", major: "Specialist in Mathematics & Its applications (Probability/Statistics), Minor in Statistics", image: "/images/리서치_신승민.jpg"  },
+        { name: "Zion Jang", role: "Intern", grade: "4th year", major: "Major in Mathematics & Statistics", image: "/images/리서치_장시온.jpg" },
+        { name: "Yoonsuh Kang", role: "Intern", grade: "1st year", major: "Major in Industrial Engineering", image: "/images/리서치_강윤서.jpg" },
+        { name: "Nayeon Kwak", role: "Intern", grade: "1st year", major: "Major in Track One (Undeclared) Engineering", image: "/images/리서치_곽나연.jpg" },        
+      ],
+    }
   ];
 
   const MemberCard = ( { member }: { member: any }) => (
@@ -97,8 +113,12 @@ export default function MembersPage() {
 
       <div className="px-6 md:px-20 py-16 space-y-24">
         {sections.map((section) => {
-          const leaders = section.members.filter((m) => m.role === "President" || m.role === "Director");
-          const executives = section.members.filter((m) => m.role !== "President" && m.role !== "Director");
+          const isIntern = (m: any) => (m.role ?? "").toLowerCase().includes("intern");
+          const isLeader = (m: any) => m.role === "President" || m.role === "Director";
+          
+          const leaders = section.members.filter(isLeader);
+          const interns = section.members.filter(isIntern);
+          const executives = section.members.filter((m) => !isLeader(m) && !isIntern(m));
           
           return (
             <div key={section.title} className="max-w-6xl mx-auto text-center space-y-8 bg-gray-100 p-8">
@@ -112,7 +132,7 @@ export default function MembersPage() {
               {/* Leaders */}
               <div className="flex justify-center flex-wrap gap-6">
                 {leaders.map((member, idx) => (
-                  <MemberCard key={idx} member={member} />
+                  <MemberCard key={`L-${idx}`} member={member} />
                 ))}
               </div>
 
@@ -120,7 +140,14 @@ export default function MembersPage() {
               {/* Executive */}
               <div className="flex justify-center flex-wrap gap-6">
                 {executives.map((member, idx) => (
-                  <MemberCard key={idx} member={member} />
+                  <MemberCard key={`E-${idx}`} member={member} />
+                ))}
+              </div>
+
+              {/* Intern */}
+              <div className="flex justify-center flex-wrap gap-6">
+                {interns.map((member, idx) => (
+                  <MemberCard key={`I-${idx}`} member={member} />
                 ))}
               </div>
             </div>
