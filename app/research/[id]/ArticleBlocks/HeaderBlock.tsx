@@ -1,7 +1,7 @@
 export default function HeaderBlock({ header }: { header: string }) {
   return (
     <div>
-      <h4 className="mt-[40px] text-3xl font-bold">{header}</h4>
+      <h4 className="mt-8 sm:mt-12 text-xl sm:text-3xl font-semibold sm:font-medium">{header}</h4>
     </div>
   );
 }

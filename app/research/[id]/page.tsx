@@ -10,12 +10,6 @@ import LinkBlock from "./ArticleBlocks/LinkBlock";
 import config from "@/app/config";
 import { createClient } from "@supabase/supabase-js";
 
-type Props = {
-  params: {
-    id: string;
-  };
-};
-
 const supabaseUrl = config.supabaseUrl;
 const supabaseKey = config.supabaseKey;
 const options = {
@@ -25,7 +19,11 @@ const options = {
 };
 const supabase = createClient(supabaseUrl, supabaseKey, options);
 
-export default async function ProjectDetail({ params }: Props) {
+export default async function ProjectDetail({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
   const { id } = await params;
   const { data, error } = await supabase
     .from("research")
@@ -44,20 +42,20 @@ export default async function ProjectDetail({ params }: Props) {
     );
   }
   return (
-    <main className="bg-background">
-      <div className=".wrap { @apply px-6; } mx-auto mt-[var(--header)] flex max-w-4xl flex-row lg:pt-[5vh]">
-        <div className="min-h-screen w-full bg-white pt-0 pb-[5%]">
-          <img
-            src={data.preview_img_src}
-            className="w-full bg-white object-cover lg:aspect-auto lg:h-120"
-          />
-          <h1 className="mx-auto mt-[32px] max-w-[75%] text-center text-5xl font-bold tracking-tight">
+    <main className="bg-background overflow-x-hidden">
+      <img
+        src={data.preview_img_src}
+        className="mx-auto mt-[var(--header-m)] w-full max-w-4xl bg-white object-cover sm:mt-[var(--header)] lg:aspect-auto lg:h-120"
+      />
+      <div className="wrap mx-auto flex max-w-4xl flex-row">
+        <div className="min-h-screen w-full bg-white pb-[5%]">
+          <h1 className="mx-auto mt-8 text-center text-2xl font-semibold tracking-tight sm:mt-12 sm:text-5xl sm:font-medium md:max-w-[75%]">
             {data.title}
           </h1>
-          <p className="mx-auto mt-[16px] max-w-[75%] text-center text-sm text-[var(--subtitle)]">
-            {data.published_date}
+          <p className="mx-auto mt-1 text-center text-[var(--subtitle)] sm:mt-3 md:max-w-[75%]">
+            {data.published_date.split("T")[0]}
           </p>
-          <div className="mx-auto mt-[16px] max-w-[75%]">
+          <div className="mx-auto mt-1 sm:mt-3 md:max-w-[75%]">
             {data.article_data?.map(
               (
                 article: {
@@ -66,6 +64,7 @@ export default async function ProjectDetail({ params }: Props) {
                   header: string;
                   text: string;
                   image_src: string;
+                  image_description: string; 
                   video_src: string;
                   link: string;
                   link_title: string;
@@ -81,7 +80,11 @@ export default async function ProjectDetail({ params }: Props) {
                     return <TextBoldBlock key={index} text={article.text} />;
                   case "image":
                     return (
-                      <ImageBlock key={index} image_src={article.image_src} />
+                      <ImageBlock
+                        key={index}
+                        image_src={article.image_src}
+                        image_description={article.image_description}
+                      />
                     );
                   case "video":
                     return (
