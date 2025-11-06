@@ -19,6 +19,9 @@ type Section = {
 };
 
 export default async function MembersPage() {
+  // NOTE: Supabase로 전환할 때 아래 주석을 해제하고,
+  // 하단의 하드코딩된 sections 배열은 삭제하세요.
+  //
   // const titles = [
   //   "Presidency",
   //   "Marketing",
@@ -26,21 +29,13 @@ export default async function MembersPage() {
   //   "Educational Events",
   //   "Social Events",
   //   "Programming",
-  //   "Research & Literature",
+  //   "Research & Literature (Life Science)",
+  //   "Research & Literature (Tech)",
   // ];
-
-  // const sections: Section[] = titles.map((t) => ({
-  //   title: t,
-  //   members: [],
-  // }));
-
-  // const { data, error } = await supabase
-  //   .from("members")
-  //   .select()
-  //   .order("name", { ascending: true });
-
-  // console.log(data);
-
+  //
+  // const sections: Section[] = titles.map((t) => ({ title: t, members: [] }));
+  //
+  // const { data, error } = await supabase.from("members").select().order("name", { ascending: true });
   // if (error) {
   //   return (
   //     <section className="wrap section-spacing">
@@ -48,9 +43,8 @@ export default async function MembersPage() {
   //     </section>
   //   );
   // }
-
   // for (const m of data) {
-  //   const section = sections.find((s) => s.title == m.title);
+  //   const section = sections.find((s) => s.title === m.title);
   //   if (section) {
   //     section.members.push({
   //       name: m.name,
@@ -62,8 +56,8 @@ export default async function MembersPage() {
   //   }
   // }
 
-  // uncomment above and delete sections below after populating the database
-  const sections = [
+  // --- 임시 하드코딩 데이터 (Supabase 마이그레이션 완료 후 삭제) ---
+  const sections: Section[] = [
     {
       title: "Presidency",
       members: [
@@ -121,6 +115,21 @@ export default async function MembersPage() {
           major:
             "Major in Health and Disease & Animal Physiology, Minor in Statistics",
           image: "/images/jenny_kim.jpeg",
+        },
+        // interns
+        {
+          name: "Ella Jeong",
+          role: "Intern",
+          grade: "3rd year",
+          major: "Major in Statistics & Economics",
+          image: "/images/마케팅_정다찬.jpg",
+        },
+        {
+          name: "Kaylee Kim",
+          role: "Intern",
+          grade: "1st year",
+          major: "Major in Life Sciences",
+          image: "/images/마케팅_김민채.jpg",
         },
       ],
     },
@@ -254,6 +263,35 @@ export default async function MembersPage() {
           major: "Major in Mechanical Engineering",
           image: "/images/jongsang_yoo.jpeg",
         },
+        // interns
+        {
+          name: "Hanna Yim",
+          role: "Intern",
+          grade: "3rd year",
+          major: "Major in Mechanical Engineering",
+          image: "/images/소셜이벤트_임한나.jpg",
+        },
+        {
+          name: "Byeongmin Nam",
+          role: "Intern",
+          grade: "3rd year",
+          major: "Major in Mechanical Engineering",
+          image: "/images/소셜이벤트_남병민.jpg",
+        },
+        {
+          name: "Myungbin Son",
+          role: "Intern",
+          grade: "1st year",
+          major: "Major in Life Sciences",
+          image: "/images/소셜이벤트_손명빈.png",
+        },
+        {
+          name: "Hoseok Lee",
+          role: "Intern",
+          grade: "1st year",
+          major: "Major in Social Sciences",
+          image: "/images/소셜이벤트_이호석.png",
+        },
       ],
     },
     {
@@ -285,7 +323,7 @@ export default async function MembersPage() {
       ],
     },
     {
-      title: "Research & Literature",
+      title: "Research & Literature (Life Science)",
       members: [
         {
           name: "Yoon Kang",
@@ -293,13 +331,6 @@ export default async function MembersPage() {
           grade: "4th year",
           major: "Major in Physiology and Health & Disease",
           image: "/images/yoonjong_kang.jpg",
-        },
-        {
-          name: "Ellie Jung",
-          role: "Director",
-          grade: "Gap term",
-          major: "Major in Industrial Engineering",
-          image: "/images/ellie_jung.jpeg",
         },
         {
           name: "Christine Seo",
@@ -310,23 +341,74 @@ export default async function MembersPage() {
           image: "/images/suyeon_seo.png",
         },
         {
+          name: "Geena Kim",
+          role: "Executive Member",
+          grade: "3rd year",
+          major:
+            "Specialist in Fundamental Genetics and its Applications, Minor in Immunology",
+          image: "/images/리서치_김지나.jpeg",
+        },
+        {
+          name: "Seoyun Heo",
+          role: "Executive Member",
+          grade: "2nd year",
+          major:
+            "Major in Health and Disease & Cell and Molecular Biology, Minor in Immunology",
+          image: "/images/리서치_허서윤.jpg",
+        },
+      ],
+    },
+    {
+      title: "Research & Literature (Tech)",
+      members: [
+        {
+          name: "Ellie Jung",
+          role: "Director",
+          grade: "Gap term",
+          major: "Major in Industrial Engineering",
+          image: "/images/ellie_jung.jpeg",
+        },
+        {
           name: "Lucas Yoon",
-          role: "(Tech) Executive Member",
+          role: "Executive Member",
           grade: "2nd year",
           major: "Major in Mathematics & Statistics",
           image: "/images/junseo_yoon.jpg",
         },
         {
           name: "David Shin",
-          role: "(Tech) Executive Member",
+          role: "Executive Member",
           grade: "2nd year",
           major:
             "Specialist in Mathematics & Its applications (Probability/Statistics), Minor in Statistics",
           image: "/images/seungmin_shin.jpg",
         },
+        // interns
+        {
+          name: "Zion Jang",
+          role: "Intern",
+          grade: "4th year",
+          major: "Major in Mathematics & Statistics",
+          image: "/images/리서치_장시온.jpg",
+        },
+        {
+          name: "Yoonsuh Kang",
+          role: "Intern",
+          grade: "1st year",
+          major: "Major in Industrial Engineering",
+          image: "/images/리서치_강윤서.jpg",
+        },
+        {
+          name: "Nayeon Kwak",
+          role: "Intern",
+          grade: "1st year",
+          major: "Major in Track One (Undeclared) Engineering",
+          image: "/images/리서치_곽나연.jpg",
+        },
       ],
     },
   ];
+  // --- 임시 하드코딩 데이터 끝 ---
 
   const MemberCard = ({ member }: { member: any }) => (
     <div className="w-60 bg-white p-4 text-center shadow-md">
@@ -359,11 +441,16 @@ export default async function MembersPage() {
 
       <div className="mb-14 space-y-24 px-6 py-16 md:mb-22 md:px-20">
         {sections.map((section) => {
-          const leaders = section.members.filter(
-            (m) => m.role === "President" || m.role === "Director",
-          );
+          // 섹션 내 역할 구분
+          const isIntern = (m: any) =>
+            (m.role ?? "").toLowerCase().includes("intern");
+          const isLeader = (m: any) =>
+            m.role === "President" || m.role === "Director";
+
+          const leaders = section.members.filter(isLeader);
+          const interns = section.members.filter(isIntern);
           const executives = section.members.filter(
-            (m) => m.role !== "President" && m.role !== "Director",
+            (m) => !isLeader(m) && !isIntern(m),
           );
 
           return (
@@ -379,18 +466,31 @@ export default async function MembersPage() {
               </h2>
 
               {/* Leaders */}
-              <div className="flex flex-wrap justify-center gap-6">
-                {leaders.map((member, idx) => (
-                  <MemberCard key={idx} member={member} />
-                ))}
-              </div>
+              {leaders.length > 0 && (
+                <div className="flex flex-wrap justify-center gap-6">
+                  {leaders.map((member, idx) => (
+                    <MemberCard key={`L-${idx}`} member={member} />
+                  ))}
+                </div>
+              )}
 
-              {/* Executive */}
-              <div className="flex flex-wrap justify-center gap-6">
-                {executives.map((member, idx) => (
-                  <MemberCard key={idx} member={member} />
-                ))}
-              </div>
+              {/* Executives */}
+              {executives.length > 0 && (
+                <div className="flex flex-wrap justify-center gap-6">
+                  {executives.map((member, idx) => (
+                    <MemberCard key={`E-${idx}`} member={member} />
+                  ))}
+                </div>
+              )}
+
+              {/* Interns */}
+              {interns.length > 0 && (
+                <div className="flex flex-wrap justify-center gap-6">
+                  {interns.map((member, idx) => (
+                    <MemberCard key={`I-${idx}`} member={member} />
+                  ))}
+                </div>
+              )}
             </div>
           );
         })}
