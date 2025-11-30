@@ -3,6 +3,10 @@ import { supabase } from "@/lib/supabaseClient";
 
 export const metadata: Metadata = {
   title: "Members",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 type Member = {

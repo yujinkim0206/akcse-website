@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function AboutPage() {
@@ -17,7 +21,9 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 to-transparent">
           <div className="mx-auto flex h-full max-w-[90rem] items-center justify-start px-6">
             <div className="w-full text-white md:w-[40%]">
-              <h1 className="mb-2 sm:mb-6 text-3xl md:text-5xl font-light">About Us</h1>
+              <h1 className="mb-2 text-3xl font-light sm:mb-6 md:text-5xl">
+                About Us
+              </h1>
               <p className="leading-7">
                 Founded in 1986, Association of Korean-Canadian Scientists and
                 Engineers (AKCSE) is a non-profit professional organization that
@@ -35,28 +41,33 @@ export default function AboutPage() {
       <section className="section-spacing mx-auto flex w-[100vw] flex-col items-center justify-center px-6">
         {/* 오른쪽: 비전 설명 */}
         <div className="flex max-w-xl flex-col text-center">
-          <h2 className="mb-2 sm:mb-6 text-3xl md:text-5xl font-light">Our Vision</h2>
+          <h2 className="mb-2 text-3xl font-light sm:mb-6 md:text-5xl">
+            Our Vision
+          </h2>
           <p className="mb-4 leading-7">
-            At AKCSE UofT, we envision a community where Korean-Canadian students in STEM feel seen, supported,
-            and inspired.
+            At AKCSE UofT, we envision a community where Korean-Canadian
+            students in STEM feel seen, supported, and inspired.
           </p>
           <p className="mb-4 leading-7">
-            We strive to create a space where academic ambition and cultural identity grow side by
-            side. Through mentorship, skill-building, and peer support, we help students navigate their unique journeys. We believe that
-            true growth happens not only in classrooms, but also in
+            We strive to create a space where academic ambition and cultural
+            identity grow side by side. Through mentorship, skill-building, and
+            peer support, we help students navigate their unique journeys. We
+            believe that true growth happens not only in classrooms, but also in
             collaboration, curiosity, and courage.
           </p>
           <p className="mb-4 leading-7">
             We are committed to building bridges
             <br />
-            —between disciplines, cultures, and generations. By empowering individuals, we strengthen our collective voice and presence in STEM.
+            —between disciplines, cultures, and generations. By empowering
+            individuals, we strengthen our collective voice and presence in
+            STEM.
           </p>
           <p className="mb-4 leading-7">
             Together, we’re shaping a future where knowledge and connection lead
             the way.
           </p>
         </div>
-        <div className="mx-auto mt-20 flex max-w-7xl flex-col gap-10 md:flex-row items-center md:justify-center">
+        <div className="mx-auto mt-20 flex max-w-7xl flex-col items-center gap-10 md:flex-row md:justify-center">
           <img
             src="/images/about-akcse.jpg"
             alt="AKCSE UofT"
@@ -72,4 +83,3 @@ export default function AboutPage() {
     </main>
   );
 }
-

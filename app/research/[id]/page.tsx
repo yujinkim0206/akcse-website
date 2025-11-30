@@ -9,6 +9,14 @@ import VideoBlock from "./ArticleBlocks/VideoBlock";
 import LinkBlock from "./ArticleBlocks/LinkBlock";
 import config from "@/app/config";
 import { createClient } from "@supabase/supabase-js";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 const supabaseUrl = config.supabaseUrl;
 const supabaseKey = config.supabaseKey;
