@@ -3,6 +3,10 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Research & Literature",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function Research() {
