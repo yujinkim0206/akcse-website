@@ -44,7 +44,10 @@ export default async function FeaturedResearch() {
       <div className="md:w-[50%]">
         <h2 className="text-sm sm:text-base mb-1 sm:mb-2 text-[var(--subtitle)]">Featured this month</h2>
         <h3 className="section-heading">{data.title}</h3>
-        <p className="mb-6 sm:mb-8 line-clamp-5">{texts}</p>
+        <p 
+          className="mb-6 sm:mb-8 line-clamp-5"
+          dangerouslySetInnerHTML={{ __html: texts }} 
+        />
         <Button href={`/research/${data.id}`} theme="black">
           Learn More
         </Button>
