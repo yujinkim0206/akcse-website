@@ -28,7 +28,7 @@ export default async function ResearchList() {
           Research & Literature
         </h1>
         <h4 className="text-[var(--subtitle)]">
-          Monthly publications on life science and technology
+          Monthly publications on medicine and technology
         </h4>
 
         <div className="mt-10 grid grid-cols-1 gap-x-[24px] gap-y-[40px] sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-[32px]">
