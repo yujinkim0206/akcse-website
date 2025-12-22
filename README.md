@@ -50,12 +50,6 @@ Table: events
 
 ## Members "/members"
 
-<table style="width: 100%;">
-  <tr>
-    <td style="width: 50%;"><img src="readme-media/m-1.png" alt="Image 3" style="width: 100%; height: auto;" /></td>
-  </tr>
-</table>
-
 ![Image](readme-media/db-members-1.png)
 Table:members
 | Column | Description |
@@ -69,12 +63,6 @@ Table:members
 | `title` | [text] Department |
 
 ## Home "/"
-
-<table style="width: 100%;">
-  <tr>
-    <td style="width: 50%;"><img src="readme-media/h-1.png" alt="Image 3" style="width: 100%; height: auto;" /></td>
-  </tr>
-</table>
 
 ![Image](readme-media/db-carousel-1.png)
 Table: carousel
