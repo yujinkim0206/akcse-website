@@ -50,7 +50,7 @@ export default async function ProjectDetail({
     );
   }
   return (
-    <main className="bg-background overflow-x-hidden">
+    <main className="bg-background overflow-x-hidden mb-[64px] md:mb-[96px]">
       <img
         src={data.preview_img_src}
         className="mx-auto mt-[var(--header-m)] w-full max-w-4xl bg-white object-cover sm:mt-[var(--header)] lg:aspect-auto lg:h-120"
