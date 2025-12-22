@@ -57,7 +57,7 @@ export default async function ProjectDetail({
       />
       <div className="wrap mx-auto flex max-w-4xl flex-row">
         <div className="min-h-screen w-full bg-white pb-[5%]">
-          <h1 className="mx-auto mt-8 text-center text-2xl font-semibold tracking-tight sm:mt-12 sm:text-5xl sm:font-medium md:max-w-[75%]">
+          <h1 className="mx-auto mt-8 text-center text-3xl tracking-tight sm:mt-12 sm:text-5xl md:max-w-[75%]">
             {data.title}
           </h1>
           <p className="mx-auto mt-1 text-center text-[var(--subtitle)] sm:mt-3 md:max-w-[75%]">
