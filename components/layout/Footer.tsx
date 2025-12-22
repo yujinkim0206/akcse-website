@@ -32,7 +32,7 @@ export default function Footer() {
         </div>
 
         <div className="md:col-span-4 space-y-1">
-          <p>© 2025 AKCSE. All rights reserved.</p>
+          <p>© 2025 AKCSE UofT. All rights reserved.</p>
           <p className="text-[#a3a3a3]">
             Created by Yujin Kim, Daniel (Euichan) Kim, Lucy (Siyoung) Lee
           </p>

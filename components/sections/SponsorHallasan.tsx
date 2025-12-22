@@ -5,7 +5,7 @@ import Button from "@/components/ui/Button";
 
 export default async function SponsorHallasan() {
   const { data, error } = await supabase
-    .from("hallasan")
+    .from("carousel")
     .select("src, alt")
     .order("order", { ascending: true });
 
