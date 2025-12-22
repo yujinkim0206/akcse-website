@@ -61,9 +61,7 @@ export default async function ProjectDetail({
           <h1 className="mx-auto mt-8 text-center text-3xl tracking-tight sm:mt-12 sm:text-5xl md:max-w-[75%]">
             {data.title}
           </h1>
-          <p className="mx-auto mt-2 text-center text-[var(--subtitle)] sm:mt-4 md:max-w-[75%]">
-            {data.subtitle}
-          </p>
+          <p className="mx-auto mt-2 text-center text-[var(--subtitle)] sm:mt-4 md:max-w-[75%]" dangerouslySetInnerHTML={{ __html: data.subtitle }} />
           <p className="mx-auto mt-1 text-center text-[var(--subtitle)] sm:mt-1 md:max-w-[75%]">
             {data.published_date.split("T")[0]}
           </p>

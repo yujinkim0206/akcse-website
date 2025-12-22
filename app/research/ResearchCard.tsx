@@ -22,9 +22,7 @@ export default function ResearchCard({ research }: { research: Research }) {
       <div className="group relative cursor-pointer">
         <div className="mt-3">
           <h6 className="text-lg sm:text-xl font-medium">{research.title}</h6>
-          <p className="line-clamp-2 text-sm text-[var(--subtitle)]">
-            {research.subtitle}
-          </p>
+          <p className="line-clamp-2 text-sm text-[var(--subtitle)]" dangerouslySetInnerHTML={{ __html: research.subtitle }} />
         </div>
       </div>
     </Link>
