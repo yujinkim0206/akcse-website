@@ -1,6 +1,9 @@
+# AKCSE UofT Website
+
+This repository contains the AKCSE UofT website built using Next.js, Tailwind CSS, and Supabase. Content for pages is dynamically rendered from the database, and upcoming events are fetched via the Google Calendar API. (https://akcseuoft.ca/)
+
 ## Note
 
-- Every page.tsx file must include both a Header and a Footer
 - The project uses Supabase with a PostgreSQL database
 - The data shown in the images below are sample data
 
@@ -44,3 +47,40 @@ Table: events
 | `img_src` | [text] Thumbnail image seen as a card |
 | `date` | [timestamptz] Date of the event including the timezone (EDT by default) |
 | `public` | [bool] Used to control whether the visibility of the event is public or private |
+
+## Members "/members"
+
+<table style="width: 100%;">
+  <tr>
+    <td style="width: 50%;"><img src="readme-media/m-1.png" alt="Image 3" style="width: 100%; height: auto;" /></td>
+  </tr>
+</table>
+
+![Image](readme-media/db-members-1.png)
+Table:members
+| Column | Description |
+| ------------- | --------------------------- |
+| `id` | [uuid] Randomly generated |
+| `name` | [text] |
+| `role` | [text] |
+| `grade` | [text] |
+| `major` | [text] |
+| `image` | [text] Profile picture |
+| `title` | [text] Department |
+
+## Home "/"
+
+<table style="width: 100%;">
+  <tr>
+    <td style="width: 50%;"><img src="readme-media/h-1.png" alt="Image 3" style="width: 100%; height: auto;" /></td>
+  </tr>
+</table>
+
+![Image](readme-media/db-carousel-1.png)
+Table: carousel
+| Column | Description |
+| ------------- | --------------------------- |
+| `id` | [uuid] Randomly generated |
+| `src` | [text] Image source |
+| `alt` | [text] Image alt |
+| `order` | [int2] Order of the image |
