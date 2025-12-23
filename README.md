@@ -1,6 +1,6 @@
 # AKCSE UofT Website
 
-This repository contains the AKCSE UofT website built using Next.js, Tailwind CSS, and Supabase. Content for pages is dynamically rendered from the database, and upcoming events are fetched via the Google Calendar API. (https://akcseuoft.ca/)
+This repository contains the AKCSE UofT website built using Next.js, Tailwind CSS, and Supabase. Content for pages is dynamically rendered from the database, and upcoming events are fetched via the Google Calendar API. The live site is available at https://akcseuoft.ca/.
 
 ## Note
 
