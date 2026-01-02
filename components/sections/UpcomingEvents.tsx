@@ -45,21 +45,35 @@ export default async function UpcomingEvents() {
   }
 
   function getMonthDay(start: any) {
-    let date: Date;
     if (start?.date) {
-      date = new Date(start.date + "T00:00:00");
-    } else {
-      date = new Date(start?.dateTime);
+      const [year, month, day] = start.date.split("-");
+
+      const monthName = new Date(
+        Number(year),
+        Number(month) - 1,
+        1,
+      ).toLocaleString("en-US", { month: "short" });
+
+      return {
+        month: monthName,
+        day,
+      };
     }
-    const month = date.toLocaleString("en-US", {
-      month: "short",
-      timeZone: "America/Toronto",
-    });
-    const day = date.toLocaleString("en-US", {
-      day: "2-digit",
-      timeZone: "America/Toronto",
-    });
-    return { month, day };
+
+    if (start?.dateTime) {
+      const date = new Date(start.dateTime);
+
+      return {
+        month: date.toLocaleString("en-US", {
+          month: "short",
+          timeZone: "America/Toronto",
+        }),
+        day: date.toLocaleString("en-US", {
+          day: "2-digit",
+          timeZone: "America/Toronto",
+        }),
+      };
+    }
   }
 
   function getTime(start: any) {
@@ -96,7 +110,9 @@ export default async function UpcomingEvents() {
                   day={day}
                   time={time}
                   summary={event.summary}
-                  location={event.location ? getShortLocation(event.location) : null}
+                  location={
+                    event.location ? getShortLocation(event.location) : null
+                  }
                   description={event.description}
                 />
               );
