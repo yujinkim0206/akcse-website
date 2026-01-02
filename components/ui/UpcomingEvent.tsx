@@ -7,6 +7,11 @@ type UpcomingEventProps = {
   description?: string | null;
 };
 
+function extractURL(text: string): string {
+  const match = text.match(/href="([^"]+)"/);
+  return match ? match[1] : "https://akcseuoft.ca/";
+} 
+
 export default function UpcomingEvent({
   month,
   day,
@@ -15,6 +20,7 @@ export default function UpcomingEvent({
   location,
   description,
 }: UpcomingEventProps) {
+  console.log(description);
   return (
     <li className="listing-card">
       <div className="flex items-center gap-8">
@@ -46,7 +52,7 @@ export default function UpcomingEvent({
       </div>
 
       {description ? (
-        <a href={description} target="_blank" rel="noopener noreferrer">
+        <a href={extractURL(description)} target="_blank" rel="noopener noreferrer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 640 640"
