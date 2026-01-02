@@ -1,5 +1,15 @@
 import type { MetadataRoute } from "next";
-import { supabase } from "@/lib/supabaseClient";
+import { createClient } from "@supabase/supabase-js";
+import config from "@/app/config";
+
+const supabaseUrl = config.supabaseUrl;
+const supabaseKey = config.supabaseKey;
+const options = {
+  db: {
+    schema: "public",
+  },
+};
+const supabase = createClient(supabaseUrl, supabaseKey, options);
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const url = "https://akcseuoft.ca";
