@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { supabase } from "@/lib/supabaseClient";
+import { createClient } from "@supabase/supabase-js";
+import config from "@/app/config";
 
 export const metadata: Metadata = {
   title: "Members",
@@ -21,6 +22,15 @@ type Section = {
   title: string;
   members: Member[];
 };
+
+const supabaseUrl = config.supabaseUrl;
+const supabaseKey = config.supabaseKey;
+const options = {
+  db: {
+    schema: "public",
+  },
+};
+const supabase = createClient(supabaseUrl, supabaseKey, options);
 
 export default async function MembersPage() {
   const titles = [

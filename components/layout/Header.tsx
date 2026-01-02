@@ -8,7 +8,6 @@ import HamburgerButton from "./HamburgerButton";
 import clsx from "clsx";
 import AKCSEUofTHeaderSocial from "./AKCSEUofTHeaderSocial";
 import EmailCopy from "./EmailCopy";
-// import SearchBar from "./SearchBar";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);

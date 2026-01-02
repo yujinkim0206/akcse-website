@@ -1,7 +1,18 @@
 import Carousel from "@/components/ui/Carousel";
-import { supabase } from "@/lib/supabaseClient";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
+import { createClient } from "@supabase/supabase-js";
+import config from "@/app/config";
+
+const supabaseUrl = config.supabaseUrl;
+const supabaseKey = config.supabaseKey;
+const options = {
+  db: {
+    schema: "public",
+  },
+};
+
+const supabase = createClient(supabaseUrl, supabaseKey, options);
 
 export default async function SponsorHallasan() {
   const { data, error } = await supabase

@@ -96,9 +96,8 @@ export default async function UpcomingEvents() {
                   day={day}
                   time={time}
                   summary={event.summary}
-                  location={
-                    event.location ? getShortLocation(event.location) : null
-                  }
+                  location={event.location ? getShortLocation(event.location) : null}
+                  description={event.description}
                 />
               );
             })}

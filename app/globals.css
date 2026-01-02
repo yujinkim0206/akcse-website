@@ -61,7 +61,7 @@
   }
 
   .listing-card {
-    @apply flex min-h-26 items-center gap-8 border-b-1 border-gray-200;
+    @apply flex min-h-26 items-center justify-between border-b-1 border-gray-200;
   }
 
   .upcoming-events {
