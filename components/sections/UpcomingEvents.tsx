@@ -60,7 +60,7 @@ export default async function UpcomingEvents() {
       };
     }
 
-    if (start?.dateTime) {
+    else {
       const date = new Date(start.dateTime);
 
       return {
