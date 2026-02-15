@@ -106,7 +106,7 @@ export default function ResearchList() {
 
         <div className="mt-5 flex gap-2">
           <Chip
-            className={`rounded-full px-4 py-2 ${
+            className={`rounded-full px-4 py-1 ${
               selected.all ? "bg-black text-white" : "bg-gray-200 text-black"
             }`}
             variant="flat"
@@ -116,7 +116,7 @@ export default function ResearchList() {
           </Chip>
 
           <Chip
-            className={`rounded-full px-4 py-2 ${
+            className={`rounded-full px-4 py-1 ${
               selected.life ? "bg-black text-white" : "bg-gray-200 text-black"
             }`}
             variant="flat"
@@ -126,7 +126,7 @@ export default function ResearchList() {
           </Chip>
 
           <Chip
-            className={`rounded-full px-4 py-2 ${
+            className={`rounded-full px-4 py-1 ${
               selected.tech ? "bg-black text-white" : "bg-gray-200 text-black"
             }`}
             variant="flat"
