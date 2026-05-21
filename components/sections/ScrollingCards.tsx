@@ -31,7 +31,7 @@ export default function ScrollingCards() {
         {doubled.map((item, i) => (
           <div
             key={i}
-            className="relative aspect-[3/4] h-[var(--card-height)] shrink-0 overflow-hidden transition-all duration-300 sm:hover:h-[var(--card-height-hover)]"
+            className="relative aspect-[3/4] h-[var(--card-height)] shrink-0 overflow-hidden transition-[height] duration-300 sm:hover:h-[var(--card-height-hover)]"
           >
             <div className="absolute top-1/2 left-1/2 h-full w-[calc(var(--card-width)*3)] -translate-x-1/2 -translate-y-1/2">
               <Image src={item.src}
