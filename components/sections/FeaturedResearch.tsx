@@ -51,7 +51,7 @@ export default async function FeaturedResearch() {
 
   return (
     <section className="wrap section-spacing flex flex-col items-center justify-between gap-12 md:flex-row md:gap-0">
-      <div className="md:w-[50%]">
+      <div className="w-full md:w-[50%]">
         <h2 className="text-sm sm:text-base mb-1 sm:mb-2 text-[var(--subtitle)]">Featured this month</h2>
         <h3 className="section-heading">{data.title}</h3>
         <p 
