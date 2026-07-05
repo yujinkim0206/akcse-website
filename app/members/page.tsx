@@ -35,8 +35,10 @@ const supabase = createClient(supabaseUrl, supabaseKey, options);
 export default async function MembersPage() {
   const titles = [
     "Presidency",
-    "Marketing",
-    "Finance",
+    "Media",
+    "Marketing Video",
+    "Corporate Relations",
+    "Product Development",
     "Educational Events",
     "Social Events",
     "Programming",
@@ -99,15 +101,22 @@ export default async function MembersPage() {
       <div className="mb-14 space-y-24 px-6 py-16 md:mb-22 md:px-20">
         {sections.map((section) => {
           // 섹션 내 역할 구분
-          const isIntern = (m: any) =>
-            (m.role ?? "").toLowerCase().includes("intern");
-          const isLeader = (m: any) =>
-            m.role === "President" || m.role === "Director";
+          const normRole = (m: Member) => (m.role ?? "").trim().toLowerCase();
+          const isIntern = (m: Member) => normRole(m).includes("intern");
+          const isVicePresident = (m: Member) =>
+            normRole(m) === "vice president";
+          const isLeader = (m: Member) =>
+            ["president", "director", "supervisor & president"].includes(
+              normRole(m),
+            );
 
-          const leaders = section.members.filter(isLeader);
+          const leaders = section.members.filter(
+            (m) => isLeader(m) && !isVicePresident(m),
+          );
+          const vicePresidents = section.members.filter(isVicePresident);
           const interns = section.members.filter(isIntern);
           const executives = section.members.filter(
-            (m) => !isLeader(m) && !isIntern(m),
+            (m) => !isLeader(m) && !isVicePresident(m) && !isIntern(m),
           );
 
           return (
@@ -127,6 +136,15 @@ export default async function MembersPage() {
                 <div className="flex flex-wrap justify-center gap-6">
                   {leaders.map((member, idx) => (
                     <MemberCard key={`L-${idx}`} member={member} />
+                  ))}
+                </div>
+              )}
+
+              {/* Vice Presidents */}
+              {vicePresidents.length > 0 && (
+                <div className="flex flex-wrap justify-center gap-6">
+                  {vicePresidents.map((member, idx) => (
+                    <MemberCard key={`VP-${idx}`} member={member} />
                   ))}
                 </div>
               )}
