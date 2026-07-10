@@ -19,7 +19,6 @@ export default function ScrollingCards() {
 
   const doubled = [...items, ...items];
   const DURATION = 80;
-  const CARD_LENGTH = DURATION / items.length;
 
   return (
     <section className="overflow-hidden section-spacing">
@@ -33,18 +32,15 @@ export default function ScrollingCards() {
             key={i}
             className="relative aspect-[3/4] h-[var(--card-height)] shrink-0 overflow-hidden"
           >
-            <div className="absolute top-1/2 left-1/2 h-full w-[calc(var(--card-width)*3)] -translate-x-1/2 -translate-y-1/2">
-              <Image src={item.src}
-                alt={item.alt}
-                draggable={false}
-                className="h-full w-full animate-[inner-marquee_linear_infinite] object-cover will-change-transform pointer-events-none select-none [-webkit-user-drag:none] [-webkit-touch-callout:none]"
-                style={{
-                  animationDuration: `${DURATION}s`,
-                  animationDelay: `-${DURATION - (i + 1) * CARD_LENGTH}s`,
-                }}
-                fill
-                />
-            </div>
+            <Image
+              src={item.src}
+              alt={item.alt}
+              draggable={false}
+              className="object-cover pointer-events-none select-none [-webkit-user-drag:none] [-webkit-touch-callout:none]"
+              sizes="(max-width: 640px) 390px, (max-width: 1024px) 450px, 100vh"
+              quality={100}
+              fill
+            />
           </div>
         ))}
       </div>
