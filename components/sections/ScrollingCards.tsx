@@ -39,6 +39,7 @@ export default function ScrollingCards() {
               className="object-cover pointer-events-none select-none [-webkit-user-drag:none] [-webkit-touch-callout:none]"
               sizes="(max-width: 640px) 390px, (max-width: 1024px) 450px, 100vh"
               quality={100}
+              priority
               fill
             />
           </div>
