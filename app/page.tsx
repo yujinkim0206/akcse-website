@@ -5,47 +5,44 @@ import ScrollingCards from "@/components/sections/ScrollingCards";
 import SponsorHallasan from "@/components/sections/SponsorHallasan";
 import Image from "next/image";
 
+
 export default function Home() {
-  return (
-    <main>
-      <Hero />
-      <ScrollingCards />
-      <FeaturedResearch />
-      <UpcomingEvents />
-      <SponsorHallasan />
-      <div className="wrap section-spacing">
-        <h2 className="mb-2 text-3xl sm:mb-4 sm:text-4xl">
-          AlphaSights Global Career Talk
-        </h2>
+ return (
+   <main>
+     <Hero />
+     <ScrollingCards />
+     <FeaturedResearch />
+     <UpcomingEvents />
+     <SponsorHallasan />
+     <div className="wrap section-spacing">
+       <h2 className="section-heading">
+         AKCSE UofT First Year Seminar 2026
+       </h2>
 
-        {/* <p className="text-[var(--subtitle)]">
-          From Study in Canada to Global Career
-        </p> */}
 
-        <div className="mx-auto mt-10 flex max-w-3xl flex-col gap-3">
-          <div className="relative w-full overflow-hidden">
-            <Image
-              src="/images/temp/a1.png"
-              alt=""
-              width={1472}
-              height={1840}
-              className="h-auto w-full"
-              priority
-            />
-          </div>
-
-          <div className="relative w-full overflow-hidden">
-            <Image
-              src="/images/temp/a2.png"
-              alt=""
-              width={1472}
-              height={1834}
-              className="h-auto w-full"
-              priority
-            />
-          </div>
-        </div>
-      </div>
-    </main>
-  );
+       {/* <p className="text-[var(--subtitle)]">
+         Featured upper-year UofT students who provided practical guidance on
+         course enrollment, program selection, bird courses, and campus life,
+         helping new students prepare for a successful first year.
+       </p> */}
+      
+       <div className="mx-auto mt-10 flex max-w-5xl flex-col gap-3">
+         <div className="relative w-full aspect-video overflow-hidden">
+           <iframe
+             className="absolute inset-0 h-full w-full"
+             src="https://www.youtube.com/embed/79AGzjUwNWQ?si=eiYa9JX4WmVYkWQ3"
+             title="YouTube video player"
+             frameBorder="0"
+             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+             referrerPolicy="strict-origin-when-cross-origin"
+             allowFullScreen
+           />
+         </div>
+       </div>
+     </div>
+   </main>
+ );
 }
+
+
+
