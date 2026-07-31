@@ -3,7 +3,6 @@ import FeaturedResearch from "@/components/sections/FeaturedResearch";
 import UpcomingEvents from "@/components/sections/UpcomingEvents";
 import ScrollingCards from "@/components/sections/ScrollingCards";
 import SponsorHallasan from "@/components/sections/SponsorHallasan";
-import Image from "next/image";
 
 
 export default function Home() {
@@ -11,20 +10,15 @@ export default function Home() {
    <main>
      <Hero />
      <ScrollingCards />
-     <FeaturedResearch />
-     <UpcomingEvents />
-     <SponsorHallasan />
      <div className="wrap section-spacing">
-       <h2 className="section-heading">
+       <h2 className="section-heading mb-1 sm:mb-2">
          AKCSE UofT First Year Seminar 2026
        </h2>
 
+      <h2 className="text-sm sm:text-base text-[var(--subtitle)]">
+        2026 First Year Seminar 현장을 영상으로 만나보세요
+      </h2>
 
-       {/* <p className="text-[var(--subtitle)]">
-         Featured upper-year UofT students who provided practical guidance on
-         course enrollment, program selection, bird courses, and campus life,
-         helping new students prepare for a successful first year.
-       </p> */}
       
        <div className="mx-auto mt-10 flex max-w-5xl flex-col gap-3">
          <div className="relative w-full aspect-video overflow-hidden">
@@ -40,6 +34,10 @@ export default function Home() {
          </div>
        </div>
      </div>
+     <FeaturedResearch />
+     <UpcomingEvents />
+     <SponsorHallasan />
+     
    </main>
  );
 }
