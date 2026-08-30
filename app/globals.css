@@ -12,8 +12,6 @@
     --vertical-spacing: 8rem;
     --grow: 30px;
     --card-height: calc(80vh - var(--grow));
-    --card-height-hover: 80vh;
-    --card-width: calc(var(--card-height) * 3 / 4);
   }
 
   html {
@@ -30,14 +28,12 @@
   @media (max-width: 1024px) {
     :root {
       --card-height: 600px;
-      --card-width: calc(var(--card-height) * 3 / 4);
     }
   }
 
   @media (max-width: 640px) {
     :root {
       --card-height: 520px;
-      --card-width: calc(var(--card-height) * 3 / 4);
     }
   }
 }
@@ -78,14 +74,5 @@
   }
   to {
     transform: translateX(-50%);
-  }
-}
-
-@keyframes inner-marquee {
-  from {
-    transform: translateX(-25%);
-  }
-  to {
-    transform: translateX(25%);
   }
 }
