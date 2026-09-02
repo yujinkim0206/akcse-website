@@ -10,6 +10,10 @@ import LinkBlock from "./ArticleBlocks/LinkBlock";
 import config from "@/app/config";
 import { createClient } from "@supabase/supabase-js";
 import type { Metadata } from "next";
+import SubHeaderBlock from "./ArticleBlocks/SubHeaderBlock";
+import TableBlock from "./ArticleBlocks/TableBlock";
+import OrderedListBlock from "./ArticleBlocks/OrderedListBlock";
+import UnorderedListBlock from "./ArticleBlocks/UnorderedListBlock";
 
 export const metadata: Metadata = {
   robots: {
@@ -78,6 +82,8 @@ export default async function ProjectDetail({
                   video_src: string;
                   link: string;
                   link_title: string;
+                  table: any;
+                  items: any;
                 },
                 index: number,
               ) => {
@@ -108,6 +114,34 @@ export default async function ProjectDetail({
                         link_title={article.link_title}
                       />
                     );
+                    case "sub-header":
+                      return (
+                        <HeaderBlock 
+                          key={index}
+                          header={article.header}
+                        />
+                      );
+                    case "table":
+                      return (
+                        <TableBlock
+                          key={index}
+                          table={article.table}
+                        />
+                      );
+                    case "ordered-list":
+                      return (
+                        <OrderedListBlock
+                        key={index}
+                        items={article.items}
+                        />
+                      );
+                    case "unordered-list":
+                      return(
+                        <UnorderedListBlock
+                        key={index}
+                        items={article.items}
+                        />
+                      );
                   default:
                     return null;
                 }
