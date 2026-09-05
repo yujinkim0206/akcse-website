@@ -117,7 +117,7 @@ export default async function ProjectDetail({
                     );
                     case "sub-header":
                       return (
-                        <HeaderBlock 
+                        <SubHeaderBlock
                           key={index}
                           header={article.header}
                         />
