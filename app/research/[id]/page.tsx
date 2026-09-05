@@ -83,6 +83,7 @@ export default async function ProjectDetail({
                   link: string;
                   link_title: string;
                   table: any;
+                  table_description: string;
                   items: any;
                 },
                 index: number,
@@ -126,6 +127,7 @@ export default async function ProjectDetail({
                         <TableBlock
                           key={index}
                           table={article.table}
+                          table_description={article.table_description}
                         />
                       );
                     case "ordered-list":
