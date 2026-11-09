@@ -36,7 +36,24 @@ const getArticle = cache(async (id: string) =>
 );
 
 const stripHtml = (html: string | null | undefined) =>
-  (html ?? "").replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
+  (html ?? "")
+    .replace(/<[^>]*>/g, " ")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/\s+/g, " ")
+    .trim();
+
+// Cut at a word boundary so previews don't end mid-word.
+const truncate = (text: string, max: number) => {
+  if (text.length <= max) return text;
+  const cut = text.slice(0, max);
+  const lastSpace = cut.lastIndexOf(" ");
+  return `${(lastSpace > max * 0.6 ? cut.slice(0, lastSpace) : cut).trimEnd()}…`;
+};
 
 export async function generateMetadata({
   params,
@@ -49,7 +66,14 @@ export async function generateMetadata({
   if (!data)
     return { title: "Research", robots: { index: false, follow: false } };
 
-  const description = stripHtml(data.subtitle) || undefined;
+  // Same source as FeaturedResearch: body "text" blocks only (no headers).
+  const bodyText = stripHtml(
+    data.article_data
+      ?.filter((block: { type: string }) => block.type === "text")
+      .map((block: { text: string }) => block.text)
+      .join(" "),
+  );
+  const description = truncate(bodyText, 160) || undefined;
   const images = data.preview_img_src
     ? [{ url: data.preview_img_src, alt: data.title }]
     : undefined;
