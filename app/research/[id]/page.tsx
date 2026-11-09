@@ -10,17 +10,11 @@ import LinkBlock from "./ArticleBlocks/LinkBlock";
 import config from "@/app/config";
 import { createClient } from "@supabase/supabase-js";
 import type { Metadata } from "next";
+import { cache } from "react";
 import SubHeaderBlock from "./ArticleBlocks/SubHeaderBlock";
 import TableBlock from "./ArticleBlocks/TableBlock";
 import OrderedListBlock from "./ArticleBlocks/OrderedListBlock";
 import UnorderedListBlock from "./ArticleBlocks/UnorderedListBlock";
-
-export const metadata: Metadata = {
-  robots: {
-    index: false,
-    follow: false,
-  },
-};
 
 const supabaseUrl = config.supabaseUrl;
 const supabaseKey = config.supabaseKey;
@@ -31,18 +25,64 @@ const options = {
 };
 const supabase = createClient(supabaseUrl, supabaseKey, options);
 
+// Deduped between generateMetadata and the page within one request.
+const getArticle = cache(async (id: string) =>
+  supabase
+    .from("research")
+    .select()
+    .eq("published", true)
+    .eq("id", id)
+    .single(),
+);
+
+const stripHtml = (html: string | null | undefined) =>
+  (html ?? "").replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const { data } = await getArticle(id);
+  // Only missing/unpublished articles are kept out of search results.
+  if (!data)
+    return { title: "Research", robots: { index: false, follow: false } };
+
+  const description = stripHtml(data.subtitle) || undefined;
+  const images = data.preview_img_src
+    ? [{ url: data.preview_img_src, alt: data.title }]
+    : undefined;
+
+  return {
+    title: { absolute: data.title },
+    description,
+    alternates: { canonical: `/research/${id}` },
+    openGraph: {
+      type: "article",
+      title: data.title,
+      description,
+      url: `/research/${id}`,
+      siteName: "AKCSE UofT",
+      publishedTime: data.published_date ?? undefined,
+      images,
+    },
+    twitter: {
+      card: images ? "summary_large_image" : "summary",
+      title: data.title,
+      description,
+      images: images?.map((i) => i.url),
+    },
+  };
+}
+
 export default async function ProjectDetail({
   params,
 }: {
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const { data, error } = await supabase
-    .from("research")
-    .select()
-    .eq("published", true)
-    .eq("id", id)
-    .single();
+  const { data, error } = await getArticle(id);
 
   if (error || !data) {
     return (
