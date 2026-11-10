@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 
 import card1 from "@/public/images/card1.webp";
 import card2 from "@/public/images/card2.webp";
@@ -19,10 +20,23 @@ export default function ScrollingCards() {
 
   const doubled = [...items, ...items];
   const DURATION = 80;
+  const trackRef = useRef<HTMLDivElement>(null);
+
+  // Pause the marquee while it is off screen so it stops repainting large images.
+  useEffect(() => {
+    const el = trackRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(([entry]) => {
+      el.style.animationPlayState = entry.isIntersecting ? "running" : "paused";
+    });
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
 
   return (
     <section className="overflow-hidden section-spacing">
       <div
+        ref={trackRef}
         className="flex w-max h-[var(--card-height)] animate-[marquee_linear_infinite] items-center justify-center will-change-transform"
         style={{ animationDuration: `${DURATION}s` }}
         onContextMenu={(e) => e.preventDefault()}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type Slide = { src: string; alt?: string };
 
@@ -15,6 +15,26 @@ export default function Carousel({
 }) {
   const [i, setI] = useState(0);
   const n = slides.length;
+  // Defer downloading the (large) slide images until the carousel is near the viewport,
+  // so they don't compete with above-the-fold content on initial load.
+  const rootRef = useRef<HTMLDivElement>(null);
+  const [near, setNear] = useState(false);
+
+  useEffect(() => {
+    const el = rootRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setNear(true);
+          io.disconnect();
+        }
+      },
+      { rootMargin: "800px 0px" },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
 
   useEffect(() => {
     const id = setInterval(() => setI((i) => (i + 1) % n), interval);
@@ -25,7 +45,7 @@ export default function Carousel({
   const next = () => setI((i) => (i + 1) % n);
 
   return (
-    <div className="flex items-center justify-end md:gap-4">
+    <div ref={rootRef} className="flex items-center justify-end md:gap-4">
       <button type="button" onClick={prev} className="hidden sm:block">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -50,8 +70,9 @@ export default function Carousel({
           {slides.map((s, idx) => (
             <div key={idx} className="h-full w-full shrink-0">
               <img
-                src={s.src}
+                src={near ? s.src : undefined}
                 alt={s.alt}
+                decoding="async"
                 className="constrast-110 h-full w-full object-cover object-center"
               />
             </div>

@@ -71,11 +71,15 @@ export default function AboutPage() {
           <img
             src="/images/about-akcse.jpg"
             alt="AKCSE UofT"
+            loading="lazy"
+            decoding="async"
             className="w-[90%] object-cover shadow-md md:w-1/3"
           />
           <img
             src="/images/about-coffeechat.jpg"
             alt="Coffee Chat"
+            loading="lazy"
+            decoding="async"
             className="w-[90%] object-cover shadow-md md:w-1/3"
           />
         </div>

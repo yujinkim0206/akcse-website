@@ -75,6 +75,8 @@ export default async function MembersPage() {
         <img
           src={member.image}
           alt={`${member.name}'s profile`}
+          loading="lazy"
+          decoding="async"
           className="mx-auto mb-2 h-55 w-45 object-cover"
         />
       )}
