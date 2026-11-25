@@ -39,6 +39,7 @@ export default async function MembersPage() {
     "Marketing Video",
     "Corporate Relations",
     "Product Development",
+    "Professional Development",
     "Educational Events",
     "Social Events",
     "Programming",
